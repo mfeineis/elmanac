@@ -3,18 +3,22 @@ This document is part one of [this repo's design documentation](../README.md)
 that aims to determine what challenges an advanced elm package search might
 have to tackle. 
 
-## Elm's potential audience
+## Elm's potential audience and what they get from package.elm-lang.org
 Elm is a relatively young language that has attracted interest from
 many development communities. Here is a feeble attempt at a broad categorization
 of Elm's potential audience.
 
 |  Category  | Background                       | Developer? |
 | ---------- | -------------------------------- | ---------- |
-| A          | Newcomers to web development     | yes        |
+| A          | Newcomers to web development     | yes/no     |
 | B          | Frontend Devs (JS/Compile-to-JS) | yes        |
 | C          | Backend Devs (dynamic languages) | yes        |
 | D          | Backend Devs (static languages)  | yes        |
-| E          | Manager/CTO                      | no         |
+| E          | Manager/CTO                      | no/maybe   |
+
+We'll now have a look at these and how [package.elm-lang.org](package.elm-lang.org) 
+is currently delivering value to them. This is complemented by what a similar
+search would look like in a popular search engine.
 
 ### A) Newcomers to web development
 Why are they considering Elm?
@@ -25,6 +29,11 @@ What answers will they seek?
 * I want to learn the basics of web development
 * I want to learn the basics of Elm
 * Why should I learn Elm instead of React/Ember/Angular?
+
+| Term                | Search Engine | Elm Package Search |
+| ------------------- | ------------- | ------------------ |
+| css                 | ![alt text](img/img-0001-google-search-css.png) | ![alt text](img/img-0002-elmpackage-search-css.png) |
+| html                | ![alt text](img/img-0003-google-search-html.png) | ![alt text](img/img-0004-elmpackage-search-html.png) |
 
 ### B) Frontend devs
 Why are they considering Elm?
@@ -75,7 +84,7 @@ What answers will they seek?
 * Who else is using this?
 * When should I not be using Elm right now?
 
-## Who is the target audience for the current Elm package search?
+## How useful is package.elm-lang.org right now?
 
 
-### Who is the target audience for an advanced Elm search?
+## What 
