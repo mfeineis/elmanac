@@ -41,6 +41,7 @@ What answers will they seek?
 * Why should I learn Elm instead of React/Ember/Angular?
 
 Typical results may involve:
+
 | Term                | Search Engine | Elm Package Search |
 | ------------------- | ------------- | ------------------ |
 | elm css             | ![Google elm css](img/01-status-quo/img-0001-google-search-css.png?raw=true) | ![Elm Package css](img/01-status-quo/img-0002-elmpackage-search-css.png?raw=true) |
@@ -65,6 +66,7 @@ What answers will they seek?
 * Can I try Elm on a small part of my existing app?
 
 Typical results may involve:
+
 | Term                | Search Engine | Elm Package Search |
 | ------------------- | ------------- | ------------------ |
 | elm div             | ![Google elm div](img/01-status-quo/img-0033-google-search-elm-div.png?raw=true) | ![Elm Package div](img/01-status-quo/img-0034-elmpackage-search-div.png?raw=true) |
@@ -89,6 +91,7 @@ What answers will they seek?
 * What is all the hype about?
 
 Typical results may involve:
+
 | Term                | Search Engine | Elm Package Search |
 | ------------------- | ------------- | ------------------ |
 | elm partial         | ![Google elm partial](img/01-status-quo/img-0023-google-search-elm-partial.png?raw=true) | ![Elm Package partial](img/01-status-quo/img-0024-elmpackage-search-partial.png?raw=true) |
@@ -104,6 +107,7 @@ What answers will they seek?
 * Why is Elm so different than my language?
 
 Typical results may involve:
+
 | Term                     | Search Engine | Elm Package Search |
 | ------------------------ | ------------- | ------------------ |
 | elm http                 | ![Google elm http](img/01-status-quo/img-0029-google-search-elm-http.png?raw=true) | ![Elm Package http](img/01-status-quo/img-0030-elmpackage-search-http.png?raw=true) |
@@ -123,6 +127,7 @@ What answers will they seek?
 * When should I not be using Elm right now?
 
 Typical results may involve:
+
 | Term                     | Search Engine | Elm Package Search |
 | ------------------------ | ------------- | ------------------ |
 | elm roadmap         | ![Google elm roadmap](img/01-status-quo/img-0013-google-search-elm-roadmap.png?raw=true) | ![Elm Package roadmap](img/01-status-quo/img-0014-elmpackage-search-roadmap.png?raw=true) |
