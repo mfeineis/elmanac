@@ -32,8 +32,8 @@ What answers will they seek?
 
 | Term                | Search Engine | Elm Package Search |
 | ------------------- | ------------- | ------------------ |
-| css                 | ![alt text](img/img-0001-google-search-css.png?raw=true) | ![alt text](img/img-0002-elmpackage-search-css.png?raw=true) |
-| html                | ![alt text](img/img-0003-google-search-html.png?raw=true) | ![alt text](img/img-0004-elmpackage-search-html.png?raw=true) |
+| css                 | ![alt text](img/01-status-quo/img-0001-google-search-css.png?raw=true) | ![alt text](img/01-status-quo/img-0002-elmpackage-search-css.png?raw=true) |
+| html                | ![alt text](img/01-status-quo/img-0003-google-search-html.png?raw=true) | ![alt text](img/01-status-quo/img-0004-elmpackage-search-html.png?raw=true) |
 
 ### B) Frontend devs
 Why are they considering Elm?
