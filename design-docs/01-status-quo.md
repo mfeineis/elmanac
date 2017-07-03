@@ -1,7 +1,7 @@
 # Status Quo
 This document is part one of [this repo's design documentation](../README.md)
 that aims to determine what challenges an advanced elm package search might
-have to tackle. 
+have to tackle. [Part two is here](02-room-for-improvement.md).
 
 Many search engine results involve links to specific Elm packages so that not
 everybody who visits [package.elm-lang.org](package.elm-lang.org) will be 
@@ -132,7 +132,6 @@ Typical results may involve:
 ## So, how useful is package.elm-lang.org right now?
 As seen above there are many cases, especially for people new to the
 language, where the current rudimentary search is less than optimal.
-
 Search is so ubiquitous in the web world that seeing no results 
 or suggestions will put off potentially interested people pretty
 quickly. 
