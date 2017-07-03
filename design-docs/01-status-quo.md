@@ -148,7 +148,7 @@ Typical results may involve:
 | elm support              | ![Google elm support](img/01-status-quo/img-0043-google-search-elm-support.png?raw=true) | ![Elm Package support](img/01-status-quo/img-0044-elmpackage-search-elm-support.png?raw=true) |
 
 By using a normal search engine the user will eventually find what she is 
-looking for but this could also be better.
+looking for but even this experience could be done better.
 
 ## So, how useful is package.elm-lang.org right now?
 As seen above there are many cases, especially for people new to the
