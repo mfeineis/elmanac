@@ -177,7 +177,9 @@ search feature will be a big step with helping to onboard new users.
 As long as you know what you are looking for the search in the package 
 name, title and summary is pretty spot on. This means that if you're 
 a somewhat experienced Elm user you probably won't *need* much more than 
-is already there. 
+is already there. Most veterans might only be using the 
+[elm-search](https://klaftertief.github.io/elm-search/) interface where
+you search for APIs by providing an (approximate) type signature.
 
 However, that doesn't mean that there is no room for improvement. The 
 potential benefit of the proposals for including full-text search and 
