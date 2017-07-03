@@ -166,4 +166,5 @@ fine grained rankings will be explored in one of the next parts.
  
 [Part two](02-room-for-improvement.md) will have a look at how other
 citizens of the web development environment are coping with these 
-issues.
+issues, what we can learn from them and eventually what we can make
+better than the rest of the web.

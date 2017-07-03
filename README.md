@@ -54,4 +54,5 @@ The corresponding documents live in the [design-docs](design-docs/) directory.
 There is no static roadmap right now. 
 
 ## Changelog
+* 2017-07-03 First draft of the Status Quo design document
 * 2017-07-02 Initial research started
