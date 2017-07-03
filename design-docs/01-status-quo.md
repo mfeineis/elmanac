@@ -43,8 +43,12 @@ Typical results may involve:
 | ------------------- | ------------- | ------------------ |
 | elm css             | ![Google elm css](img/01-status-quo/img-0001-google-search-css.png?raw=true) | ![Elm Package css](img/01-status-quo/img-0002-elmpackage-search-css.png?raw=true) |
 | elm html            | ![Google elm html](img/01-status-quo/img-0003-google-search-html.png?raw=true) | ![Elm Package html](img/01-status-quo/img-0004-elmpackage-search-html.png?raw=true) |
-| elm vs              | ![Google elm vs](img/01-status-quo/img-0005-google-search-elm-vs.png?raw=true) | ![Elm Package elm vs](img/01-status-quo/img-0006-elmpackage-search-elm-vs.png?raw=true) |
+| elm div             | ![Google elm div](img/01-status-quo/img-0033-google-search-elm-div.png?raw=true) | ![Elm Package div](img/01-status-quo/img-0034-elmpackage-search-div.png?raw=true) |
 | why choose elm      | ![Google why choose elm](img/01-status-quo/img-0007-google-search-why-choose-elm.png?raw=true) | ![Elm Package why choose elm](img/01-status-quo/img-0008-elmpackage-search-why-choose-elm.png?raw=true) |
+
+For basic search terms like CSS, DIV and HTML the user doesn't really get a good idea which
+of the packages is really relevant. She has to know that the information she's looking
+for is being displayed in the lower part of the sidebar.
 
 ### B) Frontend devs
 Why are they considering Elm?
@@ -66,7 +70,6 @@ Typical results may involve:
 
 | Term                | Search Engine | Elm Package Search |
 | ------------------- | ------------- | ------------------ |
-| elm div             | ![Google elm div](img/01-status-quo/img-0033-google-search-elm-div.png?raw=true) | ![Elm Package div](img/01-status-quo/img-0034-elmpackage-search-div.png?raw=true) |
 | elm component       | ![Google elm component](img/01-status-quo/img-0009-google-search-elm-component.png?raw=true) | ![Elm Package component](img/01-status-quo/img-0010-elmpackage-search-component.png?raw=true) |
 | elm cheat sheet     | ![Google elm cheat sheet](img/01-status-quo/img-0011-google-search-elm-cheat-sheet.png?raw=true) | ![Elm Package cheat sheet](img/01-status-quo/img-0012-elmpackage-search-cheat-sheet.png?raw=true) |
 | elm flexbox         | ![Google elm flexbox](img/01-status-quo/img-0015-google-search-elm-flexbox.png?raw=true) | ![Elm Package flexbox](img/01-status-quo/img-0016-elmpackage-search-flexbox.png?raw=true) |
@@ -74,6 +77,12 @@ Typical results may involve:
 | elm random          | ![Google elm random](img/01-status-quo/img-0019-google-search-elm-random.png?raw=true) | ![Elm Package random](img/01-status-quo/img-0020-elmpackage-search-random.png?raw=true) |
 | elm date            | ![Google elm date](img/01-status-quo/img-0021-google-search-elm-date.png?raw=true) | ![Elm Package date](img/01-status-quo/img-0022-elmpackage-search-date.png?raw=true) |
 | elm immutable       | ![Google elm immutable](img/01-status-quo/img-0027-google-search-elm-immutable.png?raw=true) | ![Elm Package immutable](img/01-status-quo/img-0028-elmpackage-search-immutable.png?raw=true) |
+| elm vs              | ![Google elm vs](img/01-status-quo/img-0005-google-search-elm-vs.png?raw=true) | ![Elm Package elm vs](img/01-status-quo/img-0006-elmpackage-search-elm-vs.png?raw=true) |
+
+As Evan stated a number of times: searching for "component" doesn't bring up anything
+that might be useful for the user. We see here that even searching for a main Elm feature 
+like "immutable" doesn't bring up any usable results. Once again you have to know that 
+the information you're looking for is hidden in the sidebar.
 
 ### C) Backend devs with background in dynamic languages 
 Why are they considering Elm?
@@ -91,24 +100,32 @@ Typical results may involve:
 
 | Term                | Search Engine | Elm Package Search |
 | ------------------- | ------------- | ------------------ |
+| elm http                 | ![Google elm http](img/01-status-quo/img-0029-google-search-elm-http.png?raw=true) | ![Elm Package http](img/01-status-quo/img-0030-elmpackage-search-http.png?raw=true) |
 | elm partial         | ![Google elm partial](img/01-status-quo/img-0023-google-search-elm-partial.png?raw=true) | ![Elm Package partial](img/01-status-quo/img-0024-elmpackage-search-partial.png?raw=true) |
 | elm route           | ![Google elm route](img/01-status-quo/img-0025-google-search-elm-route.png?raw=true) | ![Elm Package route](img/01-status-quo/img-0026-elmpackage-search-route.png?raw=true) |
+| elm server          | ![Google elm server](img/01-status-quo/img-0035-google-search-elm-server.png?raw=true) | ![Elm Package server](img/01-status-quo/img-0036-elmpackage-search-server.png?raw=true) |
+
+Searching for familiar terms brings up hardly anything the user is looking for.
 
 ### D) Backend devs with background in static languages
-Why are they considering Elm?
+Why are they considering Elm
 * I want a managable frontend replacement for my backend language of choice
 * JavaScript is tedious
 
 What answers will they seek?
 * Where are my type classes/OCaml modules/protocols/interfaces?
+* How do I do design patterns in Elm?
 * Why is Elm so different than my language?
 
 Typical results may involve:
 
 | Term                     | Search Engine | Elm Package Search |
 | ------------------------ | ------------- | ------------------ |
-| elm http                 | ![Google elm http](img/01-status-quo/img-0029-google-search-elm-http.png?raw=true) | ![Elm Package http](img/01-status-quo/img-0030-elmpackage-search-http.png?raw=true) |
 | elm dependency injection | ![Google elm dependency injection](img/01-status-quo/img-0031-google-search-elm-dependency-injection.png?raw=true) | ![Elm Package dependency injection](img/01-status-quo/img-0032-elmpackage-search-dependency-injection.png?raw=true) |
+| elm protocols            | ![Google elm protocols](img/01-status-quo/img-0039-google-search-elm-protocols.png?raw=true) | ![Elm Package protocols](img/01-status-quo/img-0040-elmpackage-search-protocols.png?raw=true) |
+| elm type classes         | ![Google elm type classes](img/01-status-quo/img-0041-google-search-elm-type-classes.png?raw=true) | ![Elm Package type classes](img/01-status-quo/img-0042-elmpackage-search-type-classes.png?raw=true) |
+
+Looking for concepts on [package.elm-lang.org](package.elm-lang.org) is futile.
 
 ### E) Manager/CTO
 Why are they considering Elm?
@@ -117,7 +134,6 @@ Why are they considering Elm?
 * Employee Y wants to use Elm in my company
 
 What answers will they seek?
-* Does Elm really have feature X and how is it achieved?
 * Can I use Elm in my team without a full rewrite?
 * How stable is Elm and what is the SLA?
 * Who else is using this?
@@ -128,6 +144,11 @@ Typical results may involve:
 | Term                     | Search Engine | Elm Package Search |
 | ------------------------ | ------------- | ------------------ |
 | elm roadmap              | ![Google elm roadmap](img/01-status-quo/img-0013-google-search-elm-roadmap.png?raw=true) | ![Elm Package roadmap](img/01-status-quo/img-0014-elmpackage-search-roadmap.png?raw=true) |
+| elm 1.0                  | ![Google elm 1.0](img/01-status-quo/img-0037-google-search-elm-1-0.png?raw=true) | ![Elm Package elm 1.0](img/01-status-quo/img-0038-elmpackage-search-elm-1-0.png?raw=true) |
+| elm support              | ![Google elm support](img/01-status-quo/img-0043-google-search-elm-support.png?raw=true) | ![Elm Package support](img/01-status-quo/img-0044-elmpackage-search-elm-support.png?raw=true) |
+
+By using a normal search engine the user will eventually find what she is 
+looking for but this could also be better.
 
 ## So, how useful is package.elm-lang.org right now?
 As seen above there are many cases, especially for people new to the
