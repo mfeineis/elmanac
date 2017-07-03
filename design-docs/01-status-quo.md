@@ -3,18 +3,28 @@ This document is part one of [this repo's design documentation](../README.md)
 that aims to determine what challenges an advanced elm package search might
 have to tackle. 
 
+Many search engine results involve links to specific Elm packages so that not
+everybody who visits [package.elm-lang.org](package.elm-lang.org) will be 
+aware that the search box is only for the packages. That's probably why the
+package page has a sidebar with common links.
+
+![Elm Package Sidebar](img/01-status-quo/snippet-0001-elmpackage-sidebar.png?raw=true)
+
+It would be nice if we could offer an experience where the search is also
+aware of the available external sources.
+
 ## Elm's potential audience and what they get from package.elm-lang.org
 Elm is a relatively young language that has attracted interest from
 many development communities. Here is a feeble attempt at a broad categorization
 of Elm's potential audience.
 
-|  Category  | Background                       | Developer? |
-| ---------- | -------------------------------- | ---------- |
-| A          | Newcomers to web development     | yes/no     |
+|  Category  | Background                       | Developer? | 
+| ---------- | -------------------------------- | ---------- | 
+| A          | Newcomers to web development     | yes/no     | 
 | B          | Frontend Devs (JS/Compile-to-JS) | yes        |
 | C          | Backend Devs (dynamic languages) | yes        |
-| D          | Backend Devs (static languages)  | yes        |
-| E          | Manager/CTO                      | no/maybe   |
+| D          | Backend Devs (static languages)  | yes        | 
+| E          | Manager/CTO                      | no/maybe   | 
 
 We'll now have a look at these and how [package.elm-lang.org](package.elm-lang.org) 
 is currently delivering value to them. This is complemented by what a similar
@@ -30,10 +40,13 @@ What answers will they seek?
 * I want to learn the basics of Elm
 * Why should I learn Elm instead of React/Ember/Angular?
 
+Typical results may involve:
 | Term                | Search Engine | Elm Package Search |
 | ------------------- | ------------- | ------------------ |
-| css                 | ![alt text](img/01-status-quo/img-0001-google-search-css.png?raw=true) | ![alt text](img/01-status-quo/img-0002-elmpackage-search-css.png?raw=true) |
-| html                | ![alt text](img/01-status-quo/img-0003-google-search-html.png?raw=true) | ![alt text](img/01-status-quo/img-0004-elmpackage-search-html.png?raw=true) |
+| elm css             | ![Google elm css](img/01-status-quo/img-0001-google-search-css.png?raw=true) | ![Elm Package css](img/01-status-quo/img-0002-elmpackage-search-css.png?raw=true) |
+| elm html            | ![Google elm html](img/01-status-quo/img-0003-google-search-html.png?raw=true) | ![Elm Package html](img/01-status-quo/img-0004-elmpackage-search-html.png?raw=true) |
+| elm vs              | ![Google elm vs](img/01-status-quo/img-0005-google-search-elm-vs.png?raw=true) | ![Elm Package elm vs](img/01-status-quo/img-0006-elmpackage-search-elm-vs.png?raw=true) |
+| why choose elm      | ![Google why choose elm](img/01-status-quo/img-0007-google-search-why-choose-elm.png?raw=true) | ![Elm Package why choose elm](img/01-status-quo/img-0008-elmpackage-search-why-choose-elm.png?raw=true) |
 
 ### B) Frontend devs
 Why are they considering Elm?
@@ -44,11 +57,24 @@ What answers will they seek?
 * How do I do components in Elm?
 * What sets Elm apart from the JavaScript frameworks I know?
 * What is the syntax for this in Elm?
+* How do I do this in Elm?
 * How do I achieve JavaScript Interop with Elm?
 * Why is Elm so different than JavaScript?
 * How long will this trend survive?
 * Where is feature X that I'm used to?
 * Can I try Elm on a small part of my existing app?
+
+Typical results may involve:
+| Term                | Search Engine | Elm Package Search |
+| ------------------- | ------------- | ------------------ |
+| elm div             | ![Google elm div](img/01-status-quo/img-0033-google-search-elm-div.png?raw=true) | ![Elm Package div](img/01-status-quo/img-0034-elmpackage-search-div.png?raw=true) |
+| elm component       | ![Google elm component](img/01-status-quo/img-0009-google-search-elm-component.png?raw=true) | ![Elm Package component](img/01-status-quo/img-0010-elmpackage-search-component.png?raw=true) |
+| elm cheat sheet     | ![Google elm cheat sheet](img/01-status-quo/img-0011-google-search-elm-cheat-sheet.png?raw=true) | ![Elm Package cheat sheet](img/01-status-quo/img-0012-elmpackage-search-cheat-sheet.png?raw=true) |
+| elm flexbox         | ![Google elm flexbox](img/01-status-quo/img-0015-google-search-elm-flexbox.png?raw=true) | ![Elm Package flexbox](img/01-status-quo/img-0016-elmpackage-search-flexbox.png?raw=true) |
+| elm settimeout      | ![Google elm settimeout](img/01-status-quo/img-0017-google-search-elm-settimeout.png?raw=true) | ![Elm Package settimeout](img/01-status-quo/img-0018-elmpackage-search-settimeout.png?raw=true) |
+| elm random          | ![Google elm random](img/01-status-quo/img-0019-google-search-elm-random.png?raw=true) | ![Elm Package random](img/01-status-quo/img-0020-elmpackage-search-random.png?raw=true) |
+| elm date            | ![Google elm date](img/01-status-quo/img-0021-google-search-elm-date.png?raw=true) | ![Elm Package date](img/01-status-quo/img-0022-elmpackage-search-date.png?raw=true) |
+| elm immutable       | ![Google elm immutable](img/01-status-quo/img-0027-google-search-elm-immutable.png?raw=true) | ![Elm Package immutable](img/01-status-quo/img-0028-elmpackage-search-immutable.png?raw=true) |
 
 ### C) Backend devs with background in dynamic languages 
 Why are they considering Elm?
@@ -62,6 +88,12 @@ What answers will they seek?
 * Why all the type hassle in Elm?
 * What is all the hype about?
 
+Typical results may involve:
+| Term                | Search Engine | Elm Package Search |
+| ------------------- | ------------- | ------------------ |
+| elm partial         | ![Google elm partial](img/01-status-quo/img-0023-google-search-elm-partial.png?raw=true) | ![Elm Package partial](img/01-status-quo/img-0024-elmpackage-search-partial.png?raw=true) |
+| elm route           | ![Google elm route](img/01-status-quo/img-0025-google-search-elm-route.png?raw=true) | ![Elm Package route](img/01-status-quo/img-0026-elmpackage-search-route.png?raw=true) |
+
 ### D) Backend devs with background in static languages
 Why are they considering Elm?
 * I want a managable frontend replacement for my backend language of choice
@@ -70,6 +102,12 @@ Why are they considering Elm?
 What answers will they seek?
 * Where are my type classes/OCaml modules/protocols/interfaces?
 * Why is Elm so different than my language?
+
+Typical results may involve:
+| Term                     | Search Engine | Elm Package Search |
+| ------------------------ | ------------- | ------------------ |
+| elm http                 | ![Google elm http](img/01-status-quo/img-0029-google-search-elm-http.png?raw=true) | ![Elm Package http](img/01-status-quo/img-0030-elmpackage-search-http.png?raw=true) |
+| elm dependency injection | ![Google elm dependency injection](img/01-status-quo/img-0031-google-search-elm-dependency-injection.png?raw=true) | ![Elm Package dependency injection](img/01-status-quo/img-0032-elmpackage-search-dependency-injection.png?raw=true) |
 
 ### E) Manager/CTO
 Why are they considering Elm?
@@ -83,6 +121,11 @@ What answers will they seek?
 * How stable is Elm and what is the SLA?
 * Who else is using this?
 * When should I not be using Elm right now?
+
+Typical results may involve:
+| Term                     | Search Engine | Elm Package Search |
+| ------------------------ | ------------- | ------------------ |
+| elm roadmap         | ![Google elm roadmap](img/01-status-quo/img-0013-google-search-elm-roadmap.png?raw=true) | ![Elm Package roadmap](img/01-status-quo/img-0014-elmpackage-search-roadmap.png?raw=true) |
 
 ## How useful is package.elm-lang.org right now?
 
