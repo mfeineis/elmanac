@@ -36,9 +36,9 @@ Before we commit to anything concrete we need to do some research first.
 The corresponding documents live in the [design-docs](design-docs/) directory.
 
 1) [How do people in the real world look for Elm packages and features](design-docs/01-status-quo.md)?
-    * [ ] Who is our target audience?
-    * [ ] Does our target audience find what it is looking for (easily)?
-    * [ ] What are the challenges we're facing?
+    * [x] Who is our target audience?
+    * [x] Does our target audience find what it is looking for (easily)?
+    * [x] What are the challenges we're facing?
 
 2) [Can we actually do better than the rest of the web](design-docs/02-room-for-improvement.md)?
     * [ ] Prior Art - how does the rest of the web solve these problems?

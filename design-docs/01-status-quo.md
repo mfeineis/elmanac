@@ -10,9 +10,6 @@ package page has a sidebar with common links.
 
 ![Elm Package Sidebar](img/01-status-quo/snippet-0001-elmpackage-sidebar.png?raw=true)
 
-It would be nice if we could offer an experience where the search is also
-aware of the available external sources.
-
 ## Elm's potential audience and what they get from package.elm-lang.org
 Elm is a relatively young language that has attracted interest from
 many development communities. Here is a feeble attempt at a broad categorization
@@ -130,9 +127,44 @@ Typical results may involve:
 
 | Term                     | Search Engine | Elm Package Search |
 | ------------------------ | ------------- | ------------------ |
-| elm roadmap         | ![Google elm roadmap](img/01-status-quo/img-0013-google-search-elm-roadmap.png?raw=true) | ![Elm Package roadmap](img/01-status-quo/img-0014-elmpackage-search-roadmap.png?raw=true) |
+| elm roadmap              | ![Google elm roadmap](img/01-status-quo/img-0013-google-search-elm-roadmap.png?raw=true) | ![Elm Package roadmap](img/01-status-quo/img-0014-elmpackage-search-roadmap.png?raw=true) |
 
-## How useful is package.elm-lang.org right now?
+## So, how useful is package.elm-lang.org right now?
+As seen above there are many cases, especially for people new to the
+language, where the current rudimentary search is less than optimal.
 
+Search is so ubiquitous in the web world that seeing no results 
+or suggestions will put off potentially interested people pretty
+quickly. 
 
-## What 
+### Elm beginners
+Beginning Elm adventurers might have a hard time finding things they
+are looking for. Often the results shown don't reflect which packages
+would be best, if you're just looking for a concept or how to do something
+in Elm that you know from the JavaScript world.
+
+Links to sources where one can find these conceptual articles are always 
+there, in the form of the sidebar on [package.elm-lang.org](package.elm-lang.org), 
+newcomers might not make that connection immediately without the proper nudge, 
+though.
+
+It would be nice if we could offer an experience where the search is also
+aware of the available external sources and could provide appropriate 
+recommendations and deep links. So it seems like the proposed conceptual 
+search feature will be a big step with helping to onboard new users.
+
+### Somewhat experienced Elm users
+As long as you know what you are looking for the search in the package 
+name, title and summary is pretty spot on. This means that if you're 
+a somewhat experienced Elm user you probably won't *need* much more than 
+is already there. 
+
+However, that doesn't mean that there is no room for improvement. The 
+potential benefit of the proposals for including full-text search and 
+fine grained rankings will be explored in one of the next parts.
+
+## What's next
+ 
+[Part two](02-room-for-improvement.md) will have a look at how other
+citizens of the web development environment are coping with these 
+issues.
