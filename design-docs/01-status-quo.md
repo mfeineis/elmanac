@@ -3,13 +3,6 @@ This document is part one of [this repo's design documentation](../README.md)
 that aims to determine what challenges an advanced elm package search might
 have to tackle. [Part two "Room for Improvement" is here](02-room-for-improvement.md).
 
-Many search engine results involve links to specific Elm packages so that not
-everybody who visits [package.elm-lang.org](package.elm-lang.org) will be 
-aware that the search box is only for the packages. That's probably why the
-package page has a sidebar with common links.
-
-![Elm Package Sidebar](img/01-status-quo/snippet-0001-elmpackage-sidebar.png?raw=true)
-
 ## Elm's potential audience and what they get from package.elm-lang.org
 Elm is a relatively young language that has attracted interest from
 many development communities. Here is a feeble attempt at a broad categorization
@@ -185,8 +178,20 @@ However, that doesn't mean that there is no room for improvement. The
 potential benefit of the proposals for including full-text search and 
 fine grained rankings will be explored in one of the next parts.
 
+### Search Engines
+Many search engine results involve links to specific Elm packages so that not
+everybody who visits [package.elm-lang.org](package.elm-lang.org) will be 
+aware that the search box is only for the packages. That's probably why the
+package page has a sidebar with common links.
+
+![Elm Package Sidebar](img/01-status-quo/snippet-0001-elmpackage-sidebar.png?raw=true)
+
 ## What's next
- 
+In this part we got a feeling for the status quo of discovering the
+intrinsics of Elm and it's ecosystem. We will look into a broader
+approach to a search feature that looks beyond your run of the mill 
+listing of packages. 
+
 [Part two](02-room-for-improvement.md) will have a look at how other
 citizens of the web development environment are coping with these 
 issues, what we can learn from them and eventually what we can make

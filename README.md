@@ -17,7 +17,6 @@ The [original mission statement](https://github.com/elm-lang/projects#package-se
 > I think it makes the most sense to focus on 1 and 2, and to not get hung up on the particular details of rankings. For any official use those details will need to be carefully tweaked, so perhaps the best system is one that makes it easy to analyze docs in various ways.
 
 ### Goals
-
 We therefore conclude that our new solution (in no particular order) ...
 
 * Should complement the (search-) facilities that are currently available
@@ -40,10 +39,13 @@ The corresponding documents live in the [design-docs](design-docs/) directory.
     * [x] Does our target audience find what it is looking for (easily)?
     * [x] What are the challenges we're facing?
 
-2) [Can we actually do better than the rest of the web](design-docs/02-room-for-improvement.md)?
-    * [ ] Prior Art - how does the rest of the web solve these problems?
-    * [ ] What are the flaws of the solutions employed?
-    * [ ] Can these flaws be addressed by:
+2) [What is the rest of the web doing regarding interactivity in their docs](design-docs/02-room-for-improvement.md)?
+    * [x] Prior Art - how does the rest of the web solve these problems?
+    * [x] What are the challenges of the solutions employed?
+    * [x] What can we learn from all this?
+
+3) [Can we actually do better than the rest of the web](design-docs/03-harmonic-convergence.md)
+    * [ ] Can the challenges discussed in part two be addressed by:
         + [ ] Full-text search in docs or even code?
         + [ ] Clever ranking based on secondary data?
         + [ ] Supplying the user with conceptual help, e.g. `component`, `TEA`?
@@ -54,5 +56,6 @@ The corresponding documents live in the [design-docs](design-docs/) directory.
 There is no static roadmap right now. 
 
 ## Changelog
+* 2017-07-04 First draft of the Room for Improvement document
 * 2017-07-03 First draft of the Status Quo design document
 * 2017-07-02 Initial research started
