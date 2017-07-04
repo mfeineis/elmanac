@@ -198,8 +198,8 @@ features to choose from and improve upon:
     * Sort by newest
     * Recently updated 
     * Most popular
-    * Quality <3
-    * Maintenance <3
+    * Quality :heart:
+    * Maintenance :heart:
 
 8) Plain categories for the user to choose from are an easy win for usability.
 9) Curated content might prove useful. This is especially true for Elm since the nice thing about the language is that it strives to have *one* best way to do something. The sidebar content currently employed is a good stepping stone, making it searchable would be even nicer.
