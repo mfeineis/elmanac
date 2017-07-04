@@ -44,7 +44,7 @@ The corresponding documents live in the [design-docs](design-docs/) directory.
     * [x] What are the challenges of the solutions employed?
     * [x] What can we learn from all this?
 
-3) [Can we actually do better than the rest of the web](design-docs/03-harmonic-convergence.md)
+3) [Can we actually do better than the rest of the web](design-docs/03-harmonic-convergence.md)?
     * [ ] Can the challenges discussed in part two be addressed by:
         + [ ] Full-text search in docs or even code?
         + [ ] Clever ranking based on secondary data?

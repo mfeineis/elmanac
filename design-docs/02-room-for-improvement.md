@@ -34,11 +34,15 @@ the comparison case studies later in the document.
 a ranking system based on the number of downloads and number of github stars. This
 is quite common to almost all package registries in use right now.
 
+![Atom editor packages](img/02-room-for-improvement/img-0112-atom-packages.png?raw=true)
+
 ## Haskell has Hoogle
 [Hoogle](https://www.haskell.org/hoogle/) is a search tool being used to 
 search for Haskell APIs although one could argue that it is not a terrible user 
 friendly one for newcomers. This style of search is already covered supremely
 by [elm-search](https://klaftertief.github.io/elm-search/).
+
+![Hoogle search](img/02-room-for-improvement/img-0113-hoogle.png?raw=true)
 
 ## JavaScript has JS Coach
 [JS.COACH](https://js.coach) is the successor service of [React Parts](https://react.parts/web)
@@ -48,12 +52,16 @@ of doing what they do - at least at the time. Worth noting is also the activity
 graph of the github repo as the background image of the list entry to give the
 user feeling for the quality of the package.
 
+![JS.COACH search](img/02-room-for-improvement/img-0114-js-coach.png?raw=true)
+
 ## JavaScript mainly has NPM
 [NPM](https://www.npmjs.com/) is the most popular package system for JavaScript 
 modules. The search box provides the user with a nice fuzzy interface. The ranking
 criteria include commendable attributes like "Quality" and "Maintenance" and
 there is an advanced search where the user can combine categories that looks
 pretty power user-ish.
+
+![NPM search](img/02-room-for-improvement/img-0115-npm.png?raw=true)
 
 ## PHP has Packagist
 [Packagist](https://packagist.org/) provides basically the same functionality for 
@@ -62,6 +70,10 @@ the download count and github stars of the package. It has a thorough detail vie
 that lists all kinds of dependencies, what the package provides and even which 
 packages/language quirks it is supposed to replace.
 
+![Packagist search](img/02-room-for-improvement/img-0116-packagist-search.png?raw=true)
+
+![Packagist detail view](img/02-room-for-improvement/img-0117-packagist-details.png?raw=true)
+
 ## Python has PIP
 The search function of Python's package manager [PIP](https://pypi.python.org/pypi/pip) 
 is pretty basic although they have some kind of "weighting" metric to give you *the best*
@@ -69,17 +81,27 @@ results. Another aspect of note is the [Python Infrastructure Status Page](https
 that is fairly normal for commercial services but has the potential of being a
 nice addition to Elm's infrastructure.
 
+![PIP search](img/02-room-for-improvement/img-0118-pip.png?raw=true)
+
 ## React had React parts
 [React Parts](https://react.parts/web) is a registry for [React](https://facebook.github.io/react/)
 whose search feature is pretty standard in this listing. What stands out is the
 very obvious separation of "web" and "native" components that every user will
 understand immediately.
 
+![React parts search](img/02-room-for-improvement/img-0119-react-parts.png?raw=true)
+
 ## Sublime has Package Control
 [Package Control](https://packagecontrol.io/stats) is the package manager for 
 the [Sublime Text Editor](https://www.sublimetext.com/). In the spirit of the 
 editor itself the website sports keyboard shortcuts. They also have quite a bit
 of [geek stats](https://packagecontrol.io/stats).
+
+![Package control home](img/02-room-for-improvement/img-0120-package-control-index.png?raw=true)
+
+![Package control search](img/02-room-for-improvement/img-0121-package-control-search.png?raw=true)
+
+![Package control stats](img/02-room-for-improvement/img-0122-package-control-stats.png?raw=true)
 
 # Case study "Components"
 NPM has taken the JavaScript web development world by storm, so virtually no major 
