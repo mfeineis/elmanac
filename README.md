@@ -45,6 +45,7 @@ The corresponding documents live in the [design-docs](design-docs/) directory.
     * [x] What can we learn from all this?
 
 3) [Can we actually do better than the rest of the web](design-docs/03-harmonic-convergence.md)?
+    * [x] Initial Mockups 
     * [ ] Can the challenges discussed in part two be addressed by:
         + [ ] Full-text search in docs or even code?
         + [ ] Clever ranking based on secondary data?
@@ -56,6 +57,7 @@ The corresponding documents live in the [design-docs](design-docs/) directory.
 There is no static roadmap right now. 
 
 ## Changelog
+* 2017-07-10 Initial mockups for Harmonic Convergence document
 * 2017-07-04 First draft of the Room for Improvement document
 * 2017-07-03 First draft of the Status Quo design document
 * 2017-07-02 Initial research started
