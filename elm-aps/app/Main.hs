@@ -1,3 +1,4 @@
+{-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
@@ -9,6 +10,7 @@ import Network.Wai.Middleware.Static
     , staticPolicy
     , (>->)
     )
+import Protolude hiding (get)
 import Web.Scotty
     ( ScottyM
     , get

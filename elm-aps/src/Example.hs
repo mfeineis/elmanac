@@ -1,8 +1,11 @@
+{-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE OverloadedStrings #-}
+
 module Example (garbage, search) where
 
 import Data.Aeson (Value(..), object, (.=))
 import Data.Text (Text)
+import Protolude
 import Utils ((|>))
 
 garbage :: Value
