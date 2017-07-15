@@ -54,6 +54,7 @@ executable elm-aps-exe
                      , protolude
                      , scotty
                      , wai
+                     , wai-cors
                      , wai-middleware-static
                      , wai-extra
   default-language:    Haskell2010

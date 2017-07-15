@@ -4,6 +4,7 @@
 module Main where
 
 import Network.Wai (Application)
+import Network.Wai.Middleware.Cors (simpleCors)
 import Network.Wai.Middleware.RequestLogger (logStdoutDev)
 import Network.Wai.Middleware.Static
     ( addBase
@@ -29,6 +30,7 @@ app :: ScottyM ()
 app = do
     middleware $ staticPolicy (noDots >-> addBase "static/images") -- for favicon.ico
     middleware logStdoutDev
+    middleware simpleCors
 
     get "/" $ do
         text "Hello World"
