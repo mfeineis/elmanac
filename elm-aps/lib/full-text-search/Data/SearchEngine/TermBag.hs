@@ -101,7 +101,7 @@ fromList termids =
 -- not make it easy to trim arrays.
 --
 denseTable :: [TermBag] -> (Vec.Vector TermId, Vec.Vector TermCount)
-denseTable termbags = 
+denseTable termbags =
     (tids, tcts)
   where
     -- First merge the TermIds into one array
@@ -216,6 +216,7 @@ instance MVec.Unbox TermId
 newtype instance MVec.MVector s TermId = MV_TermId (MVec.MVector s Word32)
 
 instance GMVec.MVector MVec.MVector TermId where
+    basicInitialize      (MV_TermId v) = GMVec.basicInitialize v
     basicLength          (MV_TermId v) = GMVec.basicLength v
     basicUnsafeSlice i l (MV_TermId v) = MV_TermId (GMVec.basicUnsafeSlice i l v)
     basicUnsafeNew     l              = MV_TermId `liftM` GMVec.basicUnsafeNew l
@@ -259,4 +260,3 @@ instance GVec.Vector Vec.Vector TermId where
     {-# INLINE basicUnsafeIndexM #-}
     {-# INLINE basicUnsafeCopy #-}
     {-# INLINE elemseq #-}
-

@@ -156,6 +156,7 @@ instance MVec.Unbox DocId
 newtype instance MVec.MVector s DocId = MV_DocId (MVec.MVector s Word32)
 
 instance GMVec.MVector MVec.MVector DocId where
+    basicInitialize      (MV_DocId v) = GMVec.basicInitialize v
     basicLength          (MV_DocId v) = GMVec.basicLength v
     basicUnsafeSlice i l (MV_DocId v) = MV_DocId (GMVec.basicUnsafeSlice i l v)
     basicUnsafeNew     l              = MV_DocId `liftM` GMVec.basicUnsafeNew l
@@ -199,4 +200,3 @@ instance GVec.Vector Vec.Vector DocId where
     {-# INLINE basicUnsafeIndexM #-}
     {-# INLINE basicUnsafeCopy #-}
     {-# INLINE elemseq #-}
-
