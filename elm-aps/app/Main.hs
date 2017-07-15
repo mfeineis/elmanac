@@ -1,5 +1,6 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE OverloadedStrings #-}
+
 module Main where
 
 import Network.Wai (Application)
@@ -23,8 +24,9 @@ import Web.Scotty
 
 import qualified Example as API
 
-app' :: ScottyM ()
-app' = do
+
+app :: ScottyM ()
+app = do
     middleware $ staticPolicy (noDots >-> addBase "static/images") -- for favicon.ico
     middleware logStdoutDev
 
@@ -40,7 +42,7 @@ app' = do
 
 
 runApp :: IO ()
-runApp = scotty 8080 app'
+runApp = scotty 8080 app
 
 
 main :: IO ()
