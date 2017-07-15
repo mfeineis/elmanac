@@ -37,10 +37,10 @@ resolver: lts-8.22
 # will not be run. This is useful for tweaking upstream packages.
 packages:
 - '.'
+- ./lib/full-text-search
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
 extra-deps: []
-#extra-deps: [ full-text-search-0.2.1.3 ]
 
 # Override default flag values for local packages and extra-deps
 flags: {}

@@ -1,3 +1,6 @@
+0.2.1.4 Martin Feineis <jacksblindedsenses@gmail.com> July 2017
+        * Compatibility with GHC 8.02 (no API changes)
+
 0.2.1.3 Duncan Coutts <duncan@well-typed.com> May 2015
         * Compatibility with GHC 7.10 (no API changes)
 
@@ -26,4 +29,3 @@
 
 0.1.0.0 Duncan Coutts <duncan@community.haskell.org> July 2013
         * Initial version (included in hackage-server)
-
