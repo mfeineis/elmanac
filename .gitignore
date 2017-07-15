@@ -2,3 +2,14 @@
 elm-stuff
 # elm-repl generated files
 repl-temp-*
+
+# Haskell stuff
+*.hi
+*.o
+.hsenv*
+.stack-work/
+.cabal-sandbox
+cabal.sandbox.config
+.DS_Store
+*.swp
+*.keter
