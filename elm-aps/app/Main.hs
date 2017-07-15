@@ -33,8 +33,8 @@ app = do
     get "/" $ do
         text "Hello World"
 
-    get "/some-json" $ do
-        json $ API.garbage
+    --get "/some-json" $ do
+    --    json $ API.garbage
 
     get "/search/:term" $ do
         term <- param "term"

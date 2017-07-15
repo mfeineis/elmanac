@@ -2,16 +2,16 @@
 
 module Main (main) where
 
+import Data.Aeson (Object, Value(..))
 import Data.Text (Text, pack)
 import GHC.Exts (fromList)
-import Test.Hspec
-import Test.Hspec.Wai
-import Test.Hspec.Wai.JSON
+--import Network.HTTP.Types.Header
+import Test.Hspec (describe, hspec, it, shouldBe)
+--import Test.Hspec.Wai
+--import Test.Hspec.Wai.JSON
 import Test.QuickCheck (property)
-import Network.HTTP.Types.Header
-import Data.Aeson (Object, Value(..), object, (.=))
 
-import Example (search)
+import qualified Example as SUT
 
 main :: IO ()
 main = hspec $ do
@@ -21,12 +21,12 @@ main = hspec $ do
 
         it "Just returns the search term wrapped in a JSON result" $
             property $
+                \term -> SUT.search (pack term) ==
+                    (Object $ fromList [ ( "result", String (pack term) ) ])
+
                 -- \x -> (read . show) x == (x :: Int)
                 -- \term -> term `shouldBe` (term :: String)
                 -- \term -> term `shouldBe` (term :: Text)
-                \term -> search (pack term) ==
-                    (Object $ fromList [ ( "result", String (pack term) ) ])
-
 --spec :: Spec
 --spec = with app $ do
 --  describe "GET /" $ do
