@@ -5,6 +5,7 @@ module Main where
 
 import qualified Elmanach as API
 
+--import Control.Applicative ((<$>))
 import Network.Wai (Application)
 import Network.Wai.Middleware.Cors (simpleCors)
 import Network.Wai.Middleware.RequestLogger (logStdoutDev)
@@ -15,6 +16,7 @@ import Network.Wai.Middleware.Static
     , (>->)
     )
 import Protolude hiding (get)
+--import System.Environment (getEnv)
 import Web.Scotty
     ( ScottyM
     , get
@@ -26,9 +28,17 @@ import Web.Scotty
     , text
     )
 
+data RuntimeMode
+    = Development
+    | Production
 
-app :: ScottyM ()
-app = do
+data AppConfig =
+    AppConfig
+        { mode :: RuntimeMode
+        }
+
+app :: AppConfig -> ScottyM ()
+app config = do
     middleware $ staticPolicy (noDots >-> addBase "assets") -- for favicon.ico
     middleware logStdoutDev
     middleware simpleCors
@@ -44,9 +54,9 @@ app = do
         json $ API.search term
 
 
-runApp :: IO ()
-runApp = scotty 8080 app
-
-
 main :: IO ()
-main = runApp
+main =
+    --port <- read <$> getEnv "ELMANACH_PORT"
+    --env <- read <$> getEnv "ELMANACH_ENV
+
+    scotty 8080 $ app $ AppConfig Development
