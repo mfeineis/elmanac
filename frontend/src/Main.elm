@@ -3,11 +3,11 @@ module Main exposing (main, reactor)
 import Html exposing (Html)
 
 
-type alias ProgramFlags =
+type alias Flags =
     {}
 
 
-defaultFlags : ProgramFlags
+defaultFlags : Flags
 defaultFlags =
     {}
 
@@ -20,7 +20,7 @@ type Msg
     = NoOp
 
 
-init : ProgramFlags -> ( Model, Cmd Msg )
+init : Flags -> ( Model, Cmd Msg )
 init flags =
     ( {}, Cmd.none )
 
@@ -40,7 +40,7 @@ view model =
     Html.text "Hello Elm!"
 
 
-main : Program ProgramFlags Model Msg
+main : Program Flags Model Msg
 main =
     Html.programWithFlags
         { init = init
