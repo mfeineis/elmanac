@@ -2,16 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Elm Advanced Package Search</title>
+    <title>Elmanach</title>
 </head>
 <body>
-    <script src="app-dev.js"></script>
+    <script src="app.js"></script>
     <script>
+    (function (app, settings) {
+        'use strict';
 
-    var app = Elm.Main.fullscreen({
+        try {
+            settings = localStorage.getItem('settings') || {};
+        }
+        catch (e) {
+            // Maybe we want to hand in errors that happened while bootstrapping?
+        }
+        finally {
+            app = Elm.Main.fullscreen(settings);
+        }
 
-    });
-
+    }(null, {}));
     </script>
 </body>
 </html>

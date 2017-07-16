@@ -43,6 +43,9 @@ app config = do
     middleware logStdoutDev
     middleware simpleCors
 
+    get "/app.js" $ do
+        redirect "/app-dev.js"
+
     get "/" $ do
         redirect "/index.html"
 
