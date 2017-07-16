@@ -8,8 +8,7 @@ A collection of research resources for this project.
 * [Hackage Full Text Search](https://hackage.haskell.org/package/full-text-search)
 * [Haskell Order Manager prototypes](https://github.com/Southern-Exposure-Seed-Exchange/Order-Manager-Prototypes)
 * [WAI.Middleware.Cors](https://github.com/larskuhtz/wai-cors/blob/master/src/Network/Wai/Middleware/Cors.hs)
-
-### Webframeworks
+* [Build your own WAI framework](http://broch.io/posts/build-your-own-wai-framework/)
 * [Scotty](https://github.com/scotty-web/scotty)
 
 ## Full Text Search

@@ -1,6 +1,10 @@
 module Main exposing (main, reactor)
 
-import Html exposing (Html)
+import App exposing (Model, Msg(..))
+import Autocomplete
+import Html
+import Update
+import View
 
 
 type alias Flags =
@@ -12,32 +16,32 @@ defaultFlags =
     {}
 
 
-type alias Model =
-    {}
-
-
-type Msg
-    = NoOp
-
-
 init : Flags -> ( Model, Cmd Msg )
 init flags =
-    ( {}, Cmd.none )
+    let
+        model =
+            { autoState = Autocomplete.empty
+            , howManyToShow = 5
+            , query = ""
+            , people =
+                [ { name = "Marty" }
+                , { name = "Doc Brown" }
+                , { name = "Einstein" }
+                , { name = "The Libyens" }
+                , { name = "Biff" }
+                , { name = "Lorane" }
+                , { name = "George" }
+                ]
+            , selectedPerson = Nothing
+            , showMenu = False
+            }
+    in
+        ( model, Cmd.none )
 
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-    Sub.none
-
-
-update : Msg -> Model -> ( Model, Cmd Msg )
-update msg model =
-    ( model, Cmd.none )
-
-
-view : Model -> Html Msg
-view model =
-    Html.text "Hello Elm!"
+    Sub.map SetAutoState Autocomplete.subscription
 
 
 main : Program Flags Model Msg
@@ -45,8 +49,8 @@ main =
     Html.programWithFlags
         { init = init
         , subscriptions = subscriptions
-        , update = update
-        , view = view
+        , update = Update.update
+        , view = View.view
         }
 
 
@@ -55,6 +59,6 @@ reactor =
     Html.program
         { init = init defaultFlags
         , subscriptions = subscriptions
-        , update = update
-        , view = view
+        , update = Update.update
+        , view = View.view
         }
