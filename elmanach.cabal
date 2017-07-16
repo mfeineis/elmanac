@@ -1,13 +1,13 @@
-name:                elm-aps
+name:                elmanach
 version:             0.1.0.0
 -- synopsis:
 -- description:
 homepage:            https://github.com/githubuser/elm-aps#readme
 license:             BSD3
 license-file:        LICENSE
-author:              Author name here
-maintainer:          example@example.com
-copyright:           2017 Author name here
+author:              Martin Feineis
+maintainer:          jacksblindedsenses@gmail.com
+copyright:           2017 Martin Feineis
 category:            Web
 build-type:          Simple
 extra-source-files:  README.md
@@ -19,8 +19,8 @@ library
 --  else
 --    ghc-options: -O2 -fsimpl-tick-factor=200
 
-  hs-source-dirs:      src
-  exposed-modules:     Example
+  hs-source-dirs:      backend/src
+  exposed-modules:     Elmanach
   other-modules:       Utils
   build-depends:       base >= 4.7 && < 5
                      , aeson
@@ -44,13 +44,13 @@ library
 --                       -fno-code
 --                       -fobject-code
 
-executable elm-aps-exe
-  hs-source-dirs:      app
+executable elmanach-exe
+  hs-source-dirs:      backend/app
   main-is:             Main.hs
   ghc-options:         -threaded -O2 -rtsopts -with-rtsopts=-N
   build-depends:       base
                      , aeson
-                     , elm-aps
+                     , elmanach
                      , protolude
                      , scotty
                      , wai
@@ -59,13 +59,13 @@ executable elm-aps-exe
                      , wai-extra
   default-language:    Haskell2010
 
-test-suite elm-aps-test
+test-suite elmanach-test
   type:                exitcode-stdio-1.0
-  hs-source-dirs:      test
+  hs-source-dirs:      backend/test
   main-is:             Spec.hs
   build-depends:       base
                      , aeson
-                     , elm-aps
+                     , elmanach
                      , hspec
                      , hspec-wai
                      , hspec-wai-json

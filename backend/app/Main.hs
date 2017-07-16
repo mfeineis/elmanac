@@ -3,6 +3,8 @@
 
 module Main where
 
+import qualified Elmanach as API
+
 import Network.Wai (Application)
 import Network.Wai.Middleware.Cors (simpleCors)
 import Network.Wai.Middleware.RequestLogger (logStdoutDev)
@@ -19,26 +21,25 @@ import Web.Scotty
     , json
     , middleware
     , param
+    , redirect
     , scotty
     , text
     )
 
-import qualified Example as API
-
 
 app :: ScottyM ()
 app = do
-    middleware $ staticPolicy (noDots >-> addBase "static/images") -- for favicon.ico
+    middleware $ staticPolicy (noDots >-> addBase "assets") -- for favicon.ico
     middleware logStdoutDev
     middleware simpleCors
 
     get "/" $ do
-        text "Hello World"
+        redirect "/index.html"
 
     --get "/some-json" $ do
     --    json $ API.garbage
 
-    get "/search/:term" $ do
+    get "/api/v1/search/:term" $ do
         term <- param "term"
         json $ API.search term
 

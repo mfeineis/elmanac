@@ -1,7 +1,7 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE OverloadedStrings #-}
 
-module Example (initCatalog, search) where
+module Elmanach (initCatalog, search) where
 
 import Data.Aeson (Value(..), object, (.=))
 --import qualified Data.Map as Map
