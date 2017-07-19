@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+}
+
+.ea-AutocompleteContainer {
+    background-color: #eee;
+}
+
+.ea-AutocompleteInput {
+    border-radius: 3px;
+}
+
+.ea-AutocompleteMenu {
+    border: 1px solid #ddd;
+}
+
+.ea-AutocompleteItemKeySelected {
+    color: #f60;
+}

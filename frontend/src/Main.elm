@@ -50,7 +50,7 @@ main =
         { init = init
         , subscriptions = subscriptions
         , update = Update.update
-        , view = View.view
+        , view = View.view { injectStyles = False }
         }
 
 
@@ -60,5 +60,5 @@ reactor =
         { init = init defaultFlags
         , subscriptions = subscriptions
         , update = Update.update
-        , view = View.view
+        , view = View.view { injectStyles = True }
         }

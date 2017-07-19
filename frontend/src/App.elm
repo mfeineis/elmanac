@@ -3,6 +3,11 @@ module App exposing (..)
 import Autocomplete
 
 
+type alias ViewOptions =
+    { injectStyles : Bool
+    }
+
+
 type alias Model =
     { autoState : Autocomplete.State
     , howManyToShow : Int
