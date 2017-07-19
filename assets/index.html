@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Elmanach</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <script src="app.js"></script>
+    <script>
+    (function (app, settings) {
+        'use strict';
+
+        try {
+            settings = localStorage.getItem('settings') || {};
+        }
+        catch (e) {
+            // Maybe we want to hand in errors that happened while bootstrapping?
+        }
+        finally {
+            app = Elm.Main.fullscreen(settings);
+        }
+
+    }(null, {}));
+    </script>
+</body>
+</html>

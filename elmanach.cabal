@@ -1,0 +1,80 @@
+name:                elmanach
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/elm-aps#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Martin Feineis
+maintainer:          jacksblindedsenses@gmail.com
+copyright:           2017 Martin Feineis
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+--  if flag(dev)
+--    ghc-options: -O0 -Wall -Werror
+--  else
+--    ghc-options: -O2 -fsimpl-tick-factor=200
+
+  hs-source-dirs:      backend/src
+  exposed-modules:     Elmanach
+  other-modules:       Utils
+  build-depends:       base >= 4.7 && < 5
+                     , aeson
+                     , full-text-search
+                     , protolude
+                     , text
+  default-language:    Haskell2010
+  ghc-options:
+                       -fwarn-tabs
+                       -fwarn-unused-imports
+                       -fwarn-name-shadowing
+                       -fwarn-incomplete-uni-patterns
+                       -fwarn-incomplete-patterns
+                       -fwarn-overlapping-patterns
+                       -fwarn-incomplete-record-updates
+                       -fdefer-type-errors
+                       -fwarn-missing-signatures
+                       -fwarn-monomorphism-restriction
+                       -fwarn-orphans
+                       -fforce-recomp
+--                       -fno-code
+--                       -fobject-code
+
+executable elmanach-exe
+  hs-source-dirs:      backend/app
+  main-is:             Main.hs
+  ghc-options:         -threaded -O2 -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , aeson
+                     , elmanach
+                     , protolude
+                     , scotty
+                     , wai
+                     , wai-cors
+                     , wai-middleware-static
+                     , wai-extra
+  default-language:    Haskell2010
+
+test-suite elmanach-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      backend/test
+  main-is:             Spec.hs
+  build-depends:       base
+                     , aeson
+                     , elmanach
+                     , hspec
+                     , hspec-wai
+                     , hspec-wai-json
+                     , http-types
+                     , QuickCheck
+                     , text
+  ghc-options:         -threaded -O2 -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/githubuser/elm-aps
