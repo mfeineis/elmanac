@@ -36,7 +36,7 @@ init flags =
             , showMenu = False
             }
     in
-        ( model, Cmd.none )
+    ( model, Cmd.none )
 
 
 subscriptions : Model -> Sub Msg

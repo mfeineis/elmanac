@@ -3,6 +3,7 @@ module Update exposing (update)
 import App exposing (..)
 import Autocomplete
 import Dom
+import Simple.Fuzzy as Fuzzy
 import Task
 
 
@@ -12,29 +13,35 @@ update msg model =
         SetQuery newQuery ->
             let
                 showMenu =
-                    not << List.isEmpty <| (acceptablePeople newQuery model.people)
+                    not << List.isEmpty <| acceptablePeople newQuery model.people
             in
-                { model | query = newQuery, showMenu = showMenu, selectedPerson = Nothing } ! []
+            { model | query = newQuery, showMenu = showMenu, selectedPerson = Nothing } ! []
 
         SetAutoState autoMsg ->
             let
+                people =
+                    acceptablePeople model.query model.people
+
                 ( newState, maybeMsg ) =
-                    Autocomplete.update updateConfig autoMsg model.howManyToShow model.autoState (acceptablePeople model.query model.people)
+                    Autocomplete.update updateConfig autoMsg model.howManyToShow model.autoState people
 
                 newModel =
                     { model | autoState = newState }
             in
-                case maybeMsg of
-                    Nothing ->
-                        newModel ! []
+            case maybeMsg of
+                Nothing ->
+                    newModel ! []
 
-                    Just updateMsg ->
-                        update updateMsg newModel
+                Just updateMsg ->
+                    update updateMsg newModel
 
         HandleEscape ->
             let
+                people =
+                    acceptablePeople model.query model.people
+
                 validOptions =
-                    not <| List.isEmpty (acceptablePeople model.query model.people)
+                    not <| List.isEmpty people
 
                 handleEscape =
                     if validOptions then
@@ -57,7 +64,7 @@ update msg model =
                         Nothing ->
                             handleEscape
             in
-                escapedModel ! []
+            escapedModel ! []
 
         Wrap toTop ->
             case model.selectedPerson of
@@ -65,16 +72,20 @@ update msg model =
                     update Reset model
 
                 Nothing ->
+                    let
+                        people =
+                            acceptablePeople model.query model.people
+                    in
                     if toTop then
                         { model
-                            | autoState = Autocomplete.resetToLastItem updateConfig (acceptablePeople model.query model.people) model.howManyToShow model.autoState
-                            , selectedPerson = List.head <| List.reverse <| List.take model.howManyToShow <| (acceptablePeople model.query model.people)
+                            | autoState = Autocomplete.resetToLastItem updateConfig people model.howManyToShow model.autoState
+                            , selectedPerson = List.head <| List.reverse <| List.take model.howManyToShow <| acceptablePeople model.query model.people
                         }
                             ! []
                     else
                         { model
                             | autoState = Autocomplete.resetToFirstItem updateConfig (acceptablePeople model.query model.people) model.howManyToShow model.autoState
-                            , selectedPerson = List.head <| List.take model.howManyToShow <| (acceptablePeople model.query model.people)
+                            , selectedPerson = List.head <| List.take model.howManyToShow <| acceptablePeople model.query model.people
                         }
                             ! []
 
@@ -87,7 +98,7 @@ update msg model =
                     setQuery model id
                         |> resetMenu
             in
-                newModel ! []
+            newModel ! []
 
         SelectPersonMouse id ->
             let
@@ -95,7 +106,7 @@ update msg model =
                     setQuery model id
                         |> resetMenu
             in
-                ( newModel, Task.attempt (\_ -> NoOp) (Dom.focus "president-input") )
+            ( newModel, Task.attempt (\_ -> NoOp) (Dom.focus "president-input") )
 
         PreviewPerson id ->
             { model | selectedPerson = Just <| getPersonAtId model.people id } ! []
@@ -109,11 +120,7 @@ update msg model =
 
 acceptablePeople : String -> List Person -> List Person
 acceptablePeople query people =
-    let
-        lowerQuery =
-            String.toLower query
-    in
-        List.filter (String.contains lowerQuery << String.toLower << .name) people
+    Fuzzy.filter .name query people
 
 
 updateConfig : Autocomplete.UpdateConfig Msg Person
@@ -148,7 +155,7 @@ removeSelection model =
 
 
 getPersonAtId people id =
-    List.filter (\entry -> entry.name == id) people
+    List.filter (\x -> x.name == id) people
         |> List.head
         |> Maybe.withDefault (Person "")
 
