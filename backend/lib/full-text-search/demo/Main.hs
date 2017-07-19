@@ -1,19 +1,19 @@
 module Main where
 
-import Data.SearchEngine
-import PackageSearch
+import Data.SearchEngine (insertDocs)
+import PackageSearch (initialPkgSearchEngine)
 
-import PackageIndexUtils
+import PackageIndexUtils (readPackageIndexFile )
 
 import Data.List
 import qualified Data.Map as Map
 import qualified Data.Text as T
 import qualified Data.Text.IO as T
-import Data.Time
+import Data.Time (getCurrentTime)
 
 import Control.Monad
 import Control.Exception
-import System.IO
+import System.IO (putStrLn)
 import System.Directory
 import System.Exit
 
@@ -51,7 +51,7 @@ main = do
 
     let loop = do
           putStr "search term> "
-          hFlush stdout 
+          hFlush stdout
           t <- T.getLine
           unless (T.null t) $ do
             putStrLn "Ranked results:"
@@ -80,7 +80,7 @@ readPackages = do
     putStrLn "Please grab 00-index.tar.gz from hackage and gunzip it."
     exitFailure
 
-  pkgs <- PackageIndexUtils.readPackageIndexFile "00-index.tar"
+  pkgs <- readPackageIndexFile "00-index.tar"
   let latestPkgs = Map.fromListWith
                      (\a b -> if packageVersion (fst a) > packageVersion (fst b)
                                 then a else b)
@@ -90,4 +90,3 @@ readPackages = do
   return . map (flattenPackageDescription . snd)
          . Map.elems
          $ latestPkgs
-
