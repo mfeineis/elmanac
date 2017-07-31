@@ -2,7 +2,7 @@ name:                elmanach
 version:             0.1.0.0
 -- synopsis:
 -- description:
-homepage:            https://github.com/githubuser/elm-aps#readme
+homepage:            https://github.com/mfeineis/elmanach#readme
 license:             BSD3
 license-file:        LICENSE
 author:              Martin Feineis
@@ -19,7 +19,7 @@ library
 --  else
 --    ghc-options: -O2 -fsimpl-tick-factor=200
 
-  hs-source-dirs:      backend/src
+  hs-source-dirs:      server/src
   exposed-modules:     Elmanach
   other-modules:       Utils
   build-depends:       base >= 4.7 && < 5
@@ -45,7 +45,7 @@ library
 --                       -fobject-code
 
 executable elmanach-exe
-  hs-source-dirs:      backend/app
+  hs-source-dirs:      server/app
   main-is:             Main.hs
   ghc-options:         -threaded -O2 -rtsopts -with-rtsopts=-N
   build-depends:       base
@@ -61,7 +61,7 @@ executable elmanach-exe
 
 test-suite elmanach-test
   type:                exitcode-stdio-1.0
-  hs-source-dirs:      backend/test
+  hs-source-dirs:      server/test
   main-is:             Spec.hs
   build-depends:       base
                      , aeson
@@ -77,4 +77,4 @@ test-suite elmanach-test
 
 source-repository head
   type:     git
-  location: https://github.com/githubuser/elm-aps
+  location: https://github.com/mfeineis/elmanach

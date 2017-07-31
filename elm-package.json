@@ -1,10 +1,10 @@
 {
     "version": "0.1.0",
     "summary": "helpful summary of your project, less than 80 characters",
-    "repository": "https://github.com/user/project.git",
+    "repository": "https://github.com/mfeineis/elmanach.git",
     "license": "BSD3",
     "source-directories": [
-        "./frontend/src"
+        "./client/src"
     ],
     "exposed-modules": [],
     "dependencies": {

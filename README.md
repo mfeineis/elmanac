@@ -1,4 +1,4 @@
-# Elm Advanced Package Search
+# Elmanach - formerly known as "Elm Advanced Package Search"
 This is the home of a hypothetical new advanced search interface for [Elm](http://www.elm-lang.org) [Packages](http://package.elm-lang.org/).
 
 ## Mission Statement
