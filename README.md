@@ -57,6 +57,7 @@ The corresponding documents live in the [design-docs](design-docs/) directory.
 There is no static roadmap right now.
 
 ## Changelog
+* 2017-07-31 Rename to "Elmanach"
 * 2017-07-19 Basic Elm frontend and Haskell backend stubs
 * 2017-07-10 Initial mockups for Harmonic Convergence document
 * 2017-07-04 First draft of the Room for Improvement document
