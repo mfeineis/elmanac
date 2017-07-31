@@ -1,6 +1,18 @@
 # Elmanach
 This is the home of a hypothetical new advanced search interface for [Elm](http://www.elm-lang.org) [Packages](http://package.elm-lang.org/).
 
+## Getting started [WIP]
+The backend is implemented in Haskell using `stack` - the frontend is as Elm as possible. To get your own
+local instance running these steps are necessary:
+
+1) Install Elm (https://guide.elm-lang.org/install.html)
+2) Install Stack (https://docs.haskellstack.org/en/stable/install_and_upgrade/)
+3) Clone the repo `git clone https://github.com/mfeineis/elmanach.git && cd elmanach`
+4) Build the backend `stack build`
+5) Build the frontend `elm make client/src/Main.elm --output=assets/app-dev.js`
+6) Start the backend `stack exec elmanach-exe`
+7) Goto `http://localhost:8080/` and you're all set
+
 ## Mission Statement
 The [original mission statement](https://github.com/elm-lang/projects#package-search) is reproduced here verbatim:
 
