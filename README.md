@@ -8,10 +8,9 @@ local instance running these steps are necessary:
 1) Install Elm (https://guide.elm-lang.org/install.html)
 2) Install Stack (https://docs.haskellstack.org/en/stable/install_and_upgrade/)
 3) Clone the repo `git clone https://github.com/mfeineis/elmanach.git && cd elmanach`
-4) Build the backend `stack build`
-5) Build the frontend `elm make client/src/Main.elm --output=assets/app-dev.js`
-6) Start the backend `stack exec elmanach-exe`
-7) Goto `http://localhost:8080/` and you're all set
+4) Build the frontend and backend via `stack build.hs`
+5) Start the backend `stack exec elmanach-exe`
+6) Goto `http://localhost:8080/` and you're all set
 
 ## Mission Statement
 The [original mission statement](https://github.com/elm-lang/projects#package-search) is reproduced here verbatim:
