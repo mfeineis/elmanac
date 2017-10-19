@@ -25,7 +25,7 @@ import Data.SearchEngine
     )
 import Data.Text (Text, toCaseFold)
 import Protolude
---import Utils ((|>))
+--import Elmify ((|>))
 
 -- | Engine setup and initialization
 

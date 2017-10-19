@@ -21,10 +21,11 @@ library
 
   hs-source-dirs:      server/src
   exposed-modules:     Elmanach
-  other-modules:       Utils
+                     , Elmify
+  -- other-modules:       Elmify
   build-depends:       base >= 4.7 && < 5
                      , aeson
-                     , full-text-search
+                     , full-text-search >= 0.2.1.4
                      , protolude
                      , text
   default-language:    Haskell2010
@@ -51,8 +52,10 @@ executable elmanach-exe
   build-depends:       base
                      , aeson
                      , elmanach
+                     , full-text-search >= 0.2.1.4
                      , protolude
                      , scotty
+                     , text
                      , wai
                      , wai-cors
                      , wai-middleware-static

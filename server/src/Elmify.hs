@@ -1,4 +1,4 @@
-module Utils ((|>), (<|)) where
+module Elmify ((|>), (<|)) where
 
 -- | Shamelessly plucked from https://github.com/elm-lang/elm-compiler/blob/master/src/Elm/Utils.hs
 

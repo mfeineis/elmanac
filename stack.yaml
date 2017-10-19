@@ -15,7 +15,7 @@
 # resolver:
 #  name: custom-snapshot
 #  location: "./custom-snapshot.yaml"
-resolver: lts-8.22
+resolver: lts-9.9
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.
@@ -37,10 +37,11 @@ resolver: lts-8.22
 # will not be run. This is useful for tweaking upstream packages.
 packages:
 - '.'
-- ./server/lib/full-text-search
+#- ./server/lib/full-text-search
+
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
-extra-deps: []
+extra-deps: [ full-text-search-0.2.1.4 ]
 
 # Override default flag values for local packages and extra-deps
 flags: {}

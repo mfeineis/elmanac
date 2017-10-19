@@ -36,7 +36,7 @@ import Web.Scotty
     , scotty
     , text
     )
-import Utils ((|>))
+import Elmify ((|>))
 
 data RuntimeMode
     = Development
