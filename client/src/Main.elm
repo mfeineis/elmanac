@@ -127,6 +127,7 @@ view model =
         ]
 
 
+elmsImpactView : Model -> Html Msg
 elmsImpactView model =
     Styled.pageExtra []
         [ Styled.sectionTitle [] [ Html.text "Elm's Impact" ]

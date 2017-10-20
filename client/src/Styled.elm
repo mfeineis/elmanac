@@ -68,6 +68,18 @@ theme =
     }
 
 
+contentAnnotation : Styled msg
+contentAnnotation attrs children =
+    Html.p
+        (styles
+            [ fontStyle italic
+            , margin2 theme.smallSpacing zero
+            ]
+            :: attrs
+        )
+        children
+
+
 contentLink : Styled msg
 contentLink attrs children =
     Html.a
@@ -78,13 +90,12 @@ contentLink attrs children =
         children
 
 
-contentAnnotation : Styled msg
-contentAnnotation attrs children =
-    Html.p
+-- TODO: implement content placeholder for detail view
+detailPlaceholder : Styled msg
+detailPlaceholder attrs children =
+    Html.a
         (styles
-            [ fontStyle italic
-            , margin2 theme.smallSpacing zero
-            ]
+            [ color (hex "1184ce") ]
             :: attrs
         )
         children
