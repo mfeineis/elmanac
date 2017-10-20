@@ -1,4 +1,4 @@
-# Elmanach
+# Elmanac
 This is the home of a hypothetical new advanced search interface for [Elm](http://www.elm-lang.org) [Packages](http://package.elm-lang.org/).
 
 ## Getting started [WIP]
@@ -7,9 +7,9 @@ local instance running these steps are necessary:
 
 1) Install Elm (https://guide.elm-lang.org/install.html)
 2) Install Stack (https://docs.haskellstack.org/en/stable/install_and_upgrade/)
-3) Clone the repo `git clone https://github.com/mfeineis/elmanach.git && cd elmanach`
+3) Clone the repo `git clone https://github.com/mfeineis/elmanac.git && cd elmanac`
 4) Build the frontend and backend via `stack build.hs`
-5) Start the backend `stack exec elmanach-exe`
+5) Start the backend `stack exec elmanac-exe`
 6) Goto `http://localhost:8080/` and you're all set
 
 ## Mission Statement
@@ -68,6 +68,7 @@ The corresponding documents live in the [design-docs](design-docs/) directory.
 There is no static roadmap right now.
 
 ## Changelog
+* 2017-10-20 Frontend build from scratch, updated Haskell dependencies and fixed project spelling to "Elmanac"
 * 2017-07-31 Rename to "Elmanach"
 * 2017-07-19 Basic Elm frontend and Haskell backend stubs
 * 2017-07-10 Initial mockups for Harmonic Convergence document

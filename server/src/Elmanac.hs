@@ -2,7 +2,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE NamedFieldPuns #-}
 
-module Elmanach
+module Elmanac
     ( SimpleDescription
     , SimpleSearchEngine
     , displayName

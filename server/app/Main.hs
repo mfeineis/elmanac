@@ -11,7 +11,7 @@ import Data.SearchEngine
     )
 import qualified Data.Text as T
 import qualified Data.Text.IO as T
-import qualified Elmanach as API
+import qualified Elmanac as API
 
 --import Control.Applicative ((<$>))
 import Network.Wai (Application)
@@ -109,7 +109,7 @@ app config = do
 
 main :: IO ()
 main =
-    --port <- read <$> getEnv "ELMANACH_PORT"
-    --env <- read <$> getEnv "ELMANACH_ENV
+    --port <- read <$> getEnv "ELMANAC_PORT"
+    --env <- read <$> getEnv "ELMANAC_ENV
 
     scotty 8080 $ app $ AppConfig Development

@@ -13426,23 +13426,23 @@ var _rtfeldman$elm_css$Css$thin = _rtfeldman$elm_css$Css$IntentionallyUnsupporte
 var _rtfeldman$elm_css$Css$thick = _rtfeldman$elm_css$Css$IntentionallyUnsupportedPleaseSeeDocs;
 var _rtfeldman$elm_css$Css$blink = _rtfeldman$elm_css$Css$IntentionallyUnsupportedPleaseSeeDocs;
 
-var _mfeineis$elmanach$Styled$theme = {
+var _mfeineis$elmanac$Styled$theme = {
 	borderColor: _rtfeldman$elm_css$Css$hex('dddddd'),
 	contentMaxWidth: _rtfeldman$elm_css$Css$px(1200),
 	defaultSpacing: _rtfeldman$elm_css$Css$px(10),
 	fontSize: _rtfeldman$elm_css$Css$px(16)
 };
-var _mfeineis$elmanach$Styled$styles = function (_p0) {
+var _mfeineis$elmanac$Styled$styles = function (_p0) {
 	return _elm_lang$html$Html_Attributes$style(
 		_rtfeldman$elm_css$Css$asPairs(_p0));
 };
-var _mfeineis$elmanach$Styled$detailCheckbox = F2(
+var _mfeineis$elmanac$Styled$detailCheckbox = F2(
 	function (attrs, children) {
 		return A2(
 			_elm_lang$html$Html$label,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{
 						ctor: '::',
 						_0: _rtfeldman$elm_css$Css$display(_rtfeldman$elm_css$Css$block),
@@ -13463,7 +13463,7 @@ var _mfeineis$elmanach$Styled$detailCheckbox = F2(
 					_elm_lang$html$Html$input,
 					{
 						ctor: '::',
-						_0: _mfeineis$elmanach$Styled$styles(
+						_0: _mfeineis$elmanac$Styled$styles(
 							{ctor: '[]'}),
 						_1: A2(
 							_elm_lang$core$Basics_ops['++'],
@@ -13478,41 +13478,41 @@ var _mfeineis$elmanach$Styled$detailCheckbox = F2(
 				_1: children
 			});
 	});
-var _mfeineis$elmanach$Styled$detailContainer = F2(
+var _mfeineis$elmanac$Styled$detailContainer = F2(
 	function (attrs, children) {
 		return A2(
 			_elm_lang$html$Html$div,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{ctor: '[]'}),
 				_1: attrs
 			},
 			children);
 	});
-var _mfeineis$elmanach$Styled$detailContent = F2(
+var _mfeineis$elmanac$Styled$detailContent = F2(
 	function (attrs, children) {
 		return A2(
 			_elm_lang$html$Html$div,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{
 						ctor: '::',
-						_0: _rtfeldman$elm_css$Css$marginBottom(_mfeineis$elmanach$Styled$theme.defaultSpacing),
+						_0: _rtfeldman$elm_css$Css$marginBottom(_mfeineis$elmanac$Styled$theme.defaultSpacing),
 						_1: {ctor: '[]'}
 					}),
 				_1: attrs
 			},
 			children);
 	});
-var _mfeineis$elmanach$Styled$detailList = F2(
+var _mfeineis$elmanac$Styled$detailList = F2(
 	function (attrs, children) {
 		return A2(
 			_elm_lang$html$Html$ul,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{
 						ctor: '::',
 						_0: _rtfeldman$elm_css$Css$listStyle(_rtfeldman$elm_css$Css$none),
@@ -13521,7 +13521,7 @@ var _mfeineis$elmanach$Styled$detailList = F2(
 							_0: _rtfeldman$elm_css$Css$margin(_rtfeldman$elm_css$Css$zero),
 							_1: {
 								ctor: '::',
-								_0: _rtfeldman$elm_css$Css$paddingLeft(_mfeineis$elmanach$Styled$theme.defaultSpacing),
+								_0: _rtfeldman$elm_css$Css$paddingLeft(_mfeineis$elmanac$Styled$theme.defaultSpacing),
 								_1: {ctor: '[]'}
 							}
 						}
@@ -13530,20 +13530,20 @@ var _mfeineis$elmanach$Styled$detailList = F2(
 			},
 			children);
 	});
-var _mfeineis$elmanach$Styled$detailTitle = F2(
+var _mfeineis$elmanac$Styled$detailTitle = F2(
 	function (attrs, children) {
 		return A2(
 			_elm_lang$html$Html$h2,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{
 						ctor: '::',
 						_0: _rtfeldman$elm_css$Css$fontSize(
 							_rtfeldman$elm_css$Css$px(16)),
 						_1: {
 							ctor: '::',
-							_0: A4(_rtfeldman$elm_css$Css$margin4, _rtfeldman$elm_css$Css$zero, _rtfeldman$elm_css$Css$zero, _mfeineis$elmanach$Styled$theme.defaultSpacing, _rtfeldman$elm_css$Css$zero),
+							_0: A4(_rtfeldman$elm_css$Css$margin4, _rtfeldman$elm_css$Css$zero, _rtfeldman$elm_css$Css$zero, _mfeineis$elmanac$Styled$theme.defaultSpacing, _rtfeldman$elm_css$Css$zero),
 							_1: {ctor: '[]'}
 						}
 					}),
@@ -13551,26 +13551,26 @@ var _mfeineis$elmanach$Styled$detailTitle = F2(
 			},
 			children);
 	});
-var _mfeineis$elmanach$Styled$mainSearchInput = F2(
+var _mfeineis$elmanac$Styled$mainSearchInput = F2(
 	function (attrs, children) {
 		return A2(
 			_elm_lang$html$Html$input,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{
 						ctor: '::',
 						_0: A3(
 							_rtfeldman$elm_css$Css$border3,
 							_rtfeldman$elm_css$Css$px(1),
 							_rtfeldman$elm_css$Css$solid,
-							_mfeineis$elmanach$Styled$theme.borderColor),
+							_mfeineis$elmanac$Styled$theme.borderColor),
 						_1: {
 							ctor: '::',
 							_0: _rtfeldman$elm_css$Css$display(_rtfeldman$elm_css$Css$inlineBlock),
 							_1: {
 								ctor: '::',
-								_0: _rtfeldman$elm_css$Css$fontSize(_mfeineis$elmanach$Styled$theme.fontSize),
+								_0: _rtfeldman$elm_css$Css$fontSize(_mfeineis$elmanac$Styled$theme.fontSize),
 								_1: {
 									ctor: '::',
 									_0: _rtfeldman$elm_css$Css$lineHeight(
@@ -13602,13 +13602,13 @@ var _mfeineis$elmanach$Styled$mainSearchInput = F2(
 			},
 			children);
 	});
-var _mfeineis$elmanach$Styled$pageExtra = F2(
+var _mfeineis$elmanac$Styled$pageExtra = F2(
 	function (attrs, children) {
 		return A2(
 			_elm_lang$html$Html$div,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{
 						ctor: '::',
 						_0: _rtfeldman$elm_css$Css$width(
@@ -13623,7 +13623,7 @@ var _mfeineis$elmanach$Styled$pageExtra = F2(
 					_elm_lang$html$Html$div,
 					{
 						ctor: '::',
-						_0: _mfeineis$elmanach$Styled$styles(
+						_0: _mfeineis$elmanac$Styled$styles(
 							{
 								ctor: '::',
 								_0: A3(
@@ -13636,10 +13636,10 @@ var _mfeineis$elmanach$Styled$pageExtra = F2(
 									_0: A2(_rtfeldman$elm_css$Css$margin2, _rtfeldman$elm_css$Css$zero, _rtfeldman$elm_css$Css$auto),
 									_1: {
 										ctor: '::',
-										_0: _rtfeldman$elm_css$Css$maxWidth(_mfeineis$elmanach$Styled$theme.contentMaxWidth),
+										_0: _rtfeldman$elm_css$Css$maxWidth(_mfeineis$elmanac$Styled$theme.contentMaxWidth),
 										_1: {
 											ctor: '::',
-											_0: _rtfeldman$elm_css$Css$padding(_mfeineis$elmanach$Styled$theme.defaultSpacing),
+											_0: _rtfeldman$elm_css$Css$padding(_mfeineis$elmanac$Styled$theme.defaultSpacing),
 											_1: {
 												ctor: '::',
 												_0: _rtfeldman$elm_css$Css$position(_rtfeldman$elm_css$Css$relative),
@@ -13660,13 +13660,13 @@ var _mfeineis$elmanach$Styled$pageExtra = F2(
 				_1: {ctor: '[]'}
 			});
 	});
-var _mfeineis$elmanach$Styled$pageFooter = F2(
+var _mfeineis$elmanac$Styled$pageFooter = F2(
 	function (attrs, children) {
 		return A2(
 			_elm_lang$html$Html$div,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{
 						ctor: '::',
 						_0: _rtfeldman$elm_css$Css$backgroundImage(
@@ -13702,16 +13702,16 @@ var _mfeineis$elmanach$Styled$pageFooter = F2(
 					_elm_lang$html$Html$div,
 					{
 						ctor: '::',
-						_0: _mfeineis$elmanach$Styled$styles(
+						_0: _mfeineis$elmanac$Styled$styles(
 							{
 								ctor: '::',
 								_0: A2(_rtfeldman$elm_css$Css$margin2, _rtfeldman$elm_css$Css$zero, _rtfeldman$elm_css$Css$auto),
 								_1: {
 									ctor: '::',
-									_0: _rtfeldman$elm_css$Css$maxWidth(_mfeineis$elmanach$Styled$theme.contentMaxWidth),
+									_0: _rtfeldman$elm_css$Css$maxWidth(_mfeineis$elmanac$Styled$theme.contentMaxWidth),
 									_1: {
 										ctor: '::',
-										_0: _rtfeldman$elm_css$Css$padding(_mfeineis$elmanach$Styled$theme.defaultSpacing),
+										_0: _rtfeldman$elm_css$Css$padding(_mfeineis$elmanac$Styled$theme.defaultSpacing),
 										_1: {
 											ctor: '::',
 											_0: _rtfeldman$elm_css$Css$position(_rtfeldman$elm_css$Css$relative),
@@ -13731,13 +13731,13 @@ var _mfeineis$elmanach$Styled$pageFooter = F2(
 				_1: {ctor: '[]'}
 			});
 	});
-var _mfeineis$elmanach$Styled$pageFrame = F2(
+var _mfeineis$elmanac$Styled$pageFrame = F2(
 	function (attrs, children) {
 		return A2(
 			_elm_lang$html$Html$div,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{
 						ctor: '::',
 						_0: _rtfeldman$elm_css$Css$boxSizing(_rtfeldman$elm_css$Css$borderBox),
@@ -13751,7 +13751,7 @@ var _mfeineis$elmanach$Styled$pageFrame = F2(
 								}),
 							_1: {
 								ctor: '::',
-								_0: _rtfeldman$elm_css$Css$fontSize(_mfeineis$elmanach$Styled$theme.fontSize),
+								_0: _rtfeldman$elm_css$Css$fontSize(_mfeineis$elmanac$Styled$theme.fontSize),
 								_1: {
 									ctor: '::',
 									_0: _rtfeldman$elm_css$Css$width(
@@ -13780,13 +13780,13 @@ var _mfeineis$elmanach$Styled$pageFrame = F2(
 				},
 				children));
 	});
-var _mfeineis$elmanach$Styled$pageHeader = F2(
+var _mfeineis$elmanac$Styled$pageHeader = F2(
 	function (attrs, children) {
 		return A2(
 			_elm_lang$html$Html$div,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{
 						ctor: '::',
 						_0: _rtfeldman$elm_css$Css$backgroundImage(
@@ -13821,16 +13821,16 @@ var _mfeineis$elmanach$Styled$pageHeader = F2(
 					_elm_lang$html$Html$div,
 					{
 						ctor: '::',
-						_0: _mfeineis$elmanach$Styled$styles(
+						_0: _mfeineis$elmanac$Styled$styles(
 							{
 								ctor: '::',
 								_0: A2(_rtfeldman$elm_css$Css$margin2, _rtfeldman$elm_css$Css$zero, _rtfeldman$elm_css$Css$auto),
 								_1: {
 									ctor: '::',
-									_0: _rtfeldman$elm_css$Css$maxWidth(_mfeineis$elmanach$Styled$theme.contentMaxWidth),
+									_0: _rtfeldman$elm_css$Css$maxWidth(_mfeineis$elmanac$Styled$theme.contentMaxWidth),
 									_1: {
 										ctor: '::',
-										_0: _rtfeldman$elm_css$Css$padding(_mfeineis$elmanach$Styled$theme.defaultSpacing),
+										_0: _rtfeldman$elm_css$Css$padding(_mfeineis$elmanac$Styled$theme.defaultSpacing),
 										_1: {
 											ctor: '::',
 											_0: _rtfeldman$elm_css$Css$position(_rtfeldman$elm_css$Css$relative),
@@ -13850,13 +13850,13 @@ var _mfeineis$elmanach$Styled$pageHeader = F2(
 				_1: {ctor: '[]'}
 			});
 	});
-var _mfeineis$elmanach$Styled$pageLogo = F2(
+var _mfeineis$elmanac$Styled$pageLogo = F2(
 	function (attrs, children) {
 		return A2(
 			_elm_lang$html$Html$img,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{
 						ctor: '::',
 						_0: _rtfeldman$elm_css$Css$display(_rtfeldman$elm_css$Css$inlineBlock),
@@ -13910,13 +13910,13 @@ var _mfeineis$elmanach$Styled$pageLogo = F2(
 			},
 			children);
 	});
-var _mfeineis$elmanach$Styled$pageMain = F2(
+var _mfeineis$elmanac$Styled$pageMain = F2(
 	function (topics, details) {
 		return A2(
 			_elm_lang$html$Html$div,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{
 						ctor: '::',
 						_0: _rtfeldman$elm_css$Css$width(
@@ -13931,7 +13931,7 @@ var _mfeineis$elmanach$Styled$pageMain = F2(
 					_elm_lang$html$Html$div,
 					{
 						ctor: '::',
-						_0: _mfeineis$elmanach$Styled$styles(
+						_0: _mfeineis$elmanac$Styled$styles(
 							{
 								ctor: '::',
 								_0: A4(
@@ -13942,7 +13942,7 @@ var _mfeineis$elmanach$Styled$pageMain = F2(
 									_rtfeldman$elm_css$Css$auto),
 								_1: {
 									ctor: '::',
-									_0: _rtfeldman$elm_css$Css$maxWidth(_mfeineis$elmanach$Styled$theme.contentMaxWidth),
+									_0: _rtfeldman$elm_css$Css$maxWidth(_mfeineis$elmanac$Styled$theme.contentMaxWidth),
 									_1: {
 										ctor: '::',
 										_0: A2(
@@ -13966,14 +13966,14 @@ var _mfeineis$elmanach$Styled$pageMain = F2(
 							_elm_lang$html$Html$div,
 							{
 								ctor: '::',
-								_0: _mfeineis$elmanach$Styled$styles(
+								_0: _mfeineis$elmanac$Styled$styles(
 									{
 										ctor: '::',
 										_0: A3(
 											_rtfeldman$elm_css$Css$borderTop3,
 											_rtfeldman$elm_css$Css$px(1),
 											_rtfeldman$elm_css$Css$solid,
-											_mfeineis$elmanach$Styled$theme.borderColor),
+											_mfeineis$elmanac$Styled$theme.borderColor),
 										_1: {
 											ctor: '::',
 											_0: A4(
@@ -13997,7 +13997,7 @@ var _mfeineis$elmanach$Styled$pageMain = F2(
 									_elm_lang$html$Html$div,
 									{
 										ctor: '::',
-										_0: _mfeineis$elmanach$Styled$styles(
+										_0: _mfeineis$elmanac$Styled$styles(
 											{
 												ctor: '::',
 												_0: _rtfeldman$elm_css$Css$backgroundColor(
@@ -14008,7 +14008,7 @@ var _mfeineis$elmanach$Styled$pageMain = F2(
 														_rtfeldman$elm_css$Css$borderRight3,
 														_rtfeldman$elm_css$Css$px(1),
 														_rtfeldman$elm_css$Css$solid,
-														_mfeineis$elmanach$Styled$theme.borderColor),
+														_mfeineis$elmanac$Styled$theme.borderColor),
 													_1: {
 														ctor: '::',
 														_0: _rtfeldman$elm_css$Css$displayFlex,
@@ -14043,7 +14043,7 @@ var _mfeineis$elmanach$Styled$pageMain = F2(
 										_elm_lang$html$Html$div,
 										{
 											ctor: '::',
-											_0: _mfeineis$elmanach$Styled$styles(
+											_0: _mfeineis$elmanac$Styled$styles(
 												{
 													ctor: '::',
 													_0: _rtfeldman$elm_css$Css$backgroundColor(
@@ -14054,7 +14054,7 @@ var _mfeineis$elmanach$Styled$pageMain = F2(
 															_rtfeldman$elm_css$Css$num(1)),
 														_1: {
 															ctor: '::',
-															_0: _rtfeldman$elm_css$Css$padding(_mfeineis$elmanach$Styled$theme.defaultSpacing),
+															_0: _rtfeldman$elm_css$Css$padding(_mfeineis$elmanac$Styled$theme.defaultSpacing),
 															_1: {
 																ctor: '::',
 																_0: _rtfeldman$elm_css$Css$width(
@@ -14075,13 +14075,13 @@ var _mfeineis$elmanach$Styled$pageMain = F2(
 				_1: {ctor: '[]'}
 			});
 	});
-var _mfeineis$elmanach$Styled$pageSecondary = F2(
+var _mfeineis$elmanac$Styled$pageSecondary = F2(
 	function (attrs, children) {
 		return A2(
 			_elm_lang$html$Html$div,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{
 						ctor: '::',
 						_0: _rtfeldman$elm_css$Css$width(
@@ -14096,16 +14096,16 @@ var _mfeineis$elmanach$Styled$pageSecondary = F2(
 					_elm_lang$html$Html$div,
 					{
 						ctor: '::',
-						_0: _mfeineis$elmanach$Styled$styles(
+						_0: _mfeineis$elmanac$Styled$styles(
 							{
 								ctor: '::',
 								_0: A2(_rtfeldman$elm_css$Css$margin2, _rtfeldman$elm_css$Css$zero, _rtfeldman$elm_css$Css$auto),
 								_1: {
 									ctor: '::',
-									_0: _rtfeldman$elm_css$Css$maxWidth(_mfeineis$elmanach$Styled$theme.contentMaxWidth),
+									_0: _rtfeldman$elm_css$Css$maxWidth(_mfeineis$elmanac$Styled$theme.contentMaxWidth),
 									_1: {
 										ctor: '::',
-										_0: _rtfeldman$elm_css$Css$padding(_mfeineis$elmanach$Styled$theme.defaultSpacing),
+										_0: _rtfeldman$elm_css$Css$padding(_mfeineis$elmanac$Styled$theme.defaultSpacing),
 										_1: {
 											ctor: '::',
 											_0: _rtfeldman$elm_css$Css$position(_rtfeldman$elm_css$Css$relative),
@@ -14125,36 +14125,36 @@ var _mfeineis$elmanach$Styled$pageSecondary = F2(
 				_1: {ctor: '[]'}
 			});
 	});
-var _mfeineis$elmanach$Styled$sectionContent = F2(
+var _mfeineis$elmanac$Styled$sectionContent = F2(
 	function (attrs, children) {
 		return A2(
 			_elm_lang$html$Html$div,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{
 						ctor: '::',
-						_0: _rtfeldman$elm_css$Css$marginBottom(_mfeineis$elmanach$Styled$theme.defaultSpacing),
+						_0: _rtfeldman$elm_css$Css$marginBottom(_mfeineis$elmanac$Styled$theme.defaultSpacing),
 						_1: {ctor: '[]'}
 					}),
 				_1: attrs
 			},
 			children);
 	});
-var _mfeineis$elmanach$Styled$sectionTitle = F2(
+var _mfeineis$elmanac$Styled$sectionTitle = F2(
 	function (attrs, children) {
 		return A2(
 			_elm_lang$html$Html$h1,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{
 						ctor: '::',
 						_0: _rtfeldman$elm_css$Css$fontSize(
 							_rtfeldman$elm_css$Css$px(18)),
 						_1: {
 							ctor: '::',
-							_0: A2(_rtfeldman$elm_css$Css$margin2, _mfeineis$elmanach$Styled$theme.defaultSpacing, _rtfeldman$elm_css$Css$zero),
+							_0: A2(_rtfeldman$elm_css$Css$margin2, _mfeineis$elmanac$Styled$theme.defaultSpacing, _rtfeldman$elm_css$Css$zero),
 							_1: {ctor: '[]'}
 						}
 					}),
@@ -14162,13 +14162,13 @@ var _mfeineis$elmanach$Styled$sectionTitle = F2(
 			},
 			children);
 	});
-var _mfeineis$elmanach$Styled$topicContainer = F3(
+var _mfeineis$elmanac$Styled$topicContainer = F3(
 	function (topic, attrs, children) {
 		return A2(
 			_elm_lang$html$Html$div,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{
 						ctor: '::',
 						_0: _rtfeldman$elm_css$Css$backgroundColor(
@@ -14187,7 +14187,7 @@ var _mfeineis$elmanach$Styled$topicContainer = F3(
 					_elm_lang$html$Html$div,
 					{
 						ctor: '::',
-						_0: _mfeineis$elmanach$Styled$styles(
+						_0: _mfeineis$elmanac$Styled$styles(
 							{
 								ctor: '::',
 								_0: _rtfeldman$elm_css$Css$alignSelf(_rtfeldman$elm_css$Css$flexStart),
@@ -14197,7 +14197,7 @@ var _mfeineis$elmanach$Styled$topicContainer = F3(
 										_rtfeldman$elm_css$Css$borderTop3,
 										_rtfeldman$elm_css$Css$px(1),
 										_rtfeldman$elm_css$Css$solid,
-										_mfeineis$elmanach$Styled$theme.borderColor),
+										_mfeineis$elmanac$Styled$theme.borderColor),
 									_1: {
 										ctor: '::',
 										_0: _rtfeldman$elm_css$Css$color(
@@ -14212,7 +14212,7 @@ var _mfeineis$elmanach$Styled$topicContainer = F3(
 													_rtfeldman$elm_css$Css$px(125)),
 												_1: {
 													ctor: '::',
-													_0: _rtfeldman$elm_css$Css$padding(_mfeineis$elmanach$Styled$theme.defaultSpacing),
+													_0: _rtfeldman$elm_css$Css$padding(_mfeineis$elmanac$Styled$theme.defaultSpacing),
 													_1: {
 														ctor: '::',
 														_0: _rtfeldman$elm_css$Css$textAlign(_rtfeldman$elm_css$Css$right),
@@ -14242,7 +14242,7 @@ var _mfeineis$elmanach$Styled$topicContainer = F3(
 						_elm_lang$html$Html$ul,
 						{
 							ctor: '::',
-							_0: _mfeineis$elmanach$Styled$styles(
+							_0: _mfeineis$elmanac$Styled$styles(
 								{
 									ctor: '::',
 									_0: _rtfeldman$elm_css$Css$alignSelf(_rtfeldman$elm_css$Css$flexStart),
@@ -14256,7 +14256,7 @@ var _mfeineis$elmanach$Styled$topicContainer = F3(
 												_rtfeldman$elm_css$Css$borderLeft3,
 												_rtfeldman$elm_css$Css$px(1),
 												_rtfeldman$elm_css$Css$solid,
-												_mfeineis$elmanach$Styled$theme.borderColor),
+												_mfeineis$elmanac$Styled$theme.borderColor),
 											_1: {
 												ctor: '::',
 												_0: _rtfeldman$elm_css$Css$listStyle(_rtfeldman$elm_css$Css$none),
@@ -14285,20 +14285,20 @@ var _mfeineis$elmanach$Styled$topicContainer = F3(
 				}
 			});
 	});
-var _mfeineis$elmanach$Styled$topicItem = F2(
+var _mfeineis$elmanac$Styled$topicItem = F2(
 	function (attrs, children) {
 		return A2(
 			_elm_lang$html$Html$li,
 			{
 				ctor: '::',
-				_0: _mfeineis$elmanach$Styled$styles(
+				_0: _mfeineis$elmanac$Styled$styles(
 					{
 						ctor: '::',
 						_0: A3(
 							_rtfeldman$elm_css$Css$borderTop3,
 							_rtfeldman$elm_css$Css$px(1),
 							_rtfeldman$elm_css$Css$solid,
-							_mfeineis$elmanach$Styled$theme.borderColor),
+							_mfeineis$elmanac$Styled$theme.borderColor),
 						_1: {
 							ctor: '::',
 							_0: _rtfeldman$elm_css$Css$marginTop(
@@ -14314,7 +14314,7 @@ var _mfeineis$elmanach$Styled$topicItem = F2(
 					_elm_lang$html$Html$button,
 					{
 						ctor: '::',
-						_0: _mfeineis$elmanach$Styled$styles(
+						_0: _mfeineis$elmanac$Styled$styles(
 							{
 								ctor: '::',
 								_0: _rtfeldman$elm_css$Css$backgroundColor(
@@ -14330,10 +14330,10 @@ var _mfeineis$elmanach$Styled$topicItem = F2(
 											_0: _rtfeldman$elm_css$Css$cursor(_rtfeldman$elm_css$Css$pointer),
 											_1: {
 												ctor: '::',
-												_0: _rtfeldman$elm_css$Css$fontSize(_mfeineis$elmanach$Styled$theme.fontSize),
+												_0: _rtfeldman$elm_css$Css$fontSize(_mfeineis$elmanac$Styled$theme.fontSize),
 												_1: {
 													ctor: '::',
-													_0: _rtfeldman$elm_css$Css$padding(_mfeineis$elmanach$Styled$theme.defaultSpacing),
+													_0: _rtfeldman$elm_css$Css$padding(_mfeineis$elmanac$Styled$theme.defaultSpacing),
 													_1: {
 														ctor: '::',
 														_0: _rtfeldman$elm_css$Css$textAlign(_rtfeldman$elm_css$Css$left),
@@ -14357,14 +14357,14 @@ var _mfeineis$elmanach$Styled$topicItem = F2(
 			});
 	});
 
-var _mfeineis$elmanach$Main$settingsView = function (model) {
+var _mfeineis$elmanac$Main$settingsView = function (model) {
 	return A2(
-		_mfeineis$elmanach$Styled$detailContainer,
+		_mfeineis$elmanac$Styled$detailContainer,
 		{ctor: '[]'},
 		{
 			ctor: '::',
 			_0: A2(
-				_mfeineis$elmanach$Styled$detailTitle,
+				_mfeineis$elmanac$Styled$detailTitle,
 				{ctor: '[]'},
 				{
 					ctor: '::',
@@ -14374,22 +14374,22 @@ var _mfeineis$elmanach$Main$settingsView = function (model) {
 			_1: {
 				ctor: '::',
 				_0: A2(
-					_mfeineis$elmanach$Styled$detailContent,
+					_mfeineis$elmanac$Styled$detailContent,
 					{ctor: '[]'},
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html$text('\n                Here you may choose the settings for your\n                personal Elmanach experience.\n                '),
+						_0: _elm_lang$html$Html$text('\n                Here you may choose the settings for your\n                personal Elmanac experience.\n                '),
 						_1: {ctor: '[]'}
 					}),
 				_1: {
 					ctor: '::',
 					_0: A2(
-						_mfeineis$elmanach$Styled$detailContent,
+						_mfeineis$elmanac$Styled$detailContent,
 						{ctor: '[]'},
 						{
 							ctor: '::',
 							_0: A2(
-								_mfeineis$elmanach$Styled$detailCheckbox,
+								_mfeineis$elmanac$Styled$detailCheckbox,
 								{ctor: '[]'},
 								{
 									ctor: '::',
@@ -14399,12 +14399,12 @@ var _mfeineis$elmanach$Main$settingsView = function (model) {
 							_1: {
 								ctor: '::',
 								_0: A2(
-									_mfeineis$elmanach$Styled$detailList,
+									_mfeineis$elmanac$Styled$detailList,
 									{ctor: '[]'},
 									{
 										ctor: '::',
 										_0: A2(
-											_mfeineis$elmanach$Styled$detailCheckbox,
+											_mfeineis$elmanac$Styled$detailCheckbox,
 											{
 												ctor: '::',
 												_0: _elm_lang$html$Html_Attributes$checked(true),
@@ -14418,7 +14418,7 @@ var _mfeineis$elmanach$Main$settingsView = function (model) {
 										_1: {
 											ctor: '::',
 											_0: A2(
-												_mfeineis$elmanach$Styled$detailCheckbox,
+												_mfeineis$elmanac$Styled$detailCheckbox,
 												{
 													ctor: '::',
 													_0: _elm_lang$html$Html_Attributes$checked(true),
@@ -14432,7 +14432,7 @@ var _mfeineis$elmanach$Main$settingsView = function (model) {
 											_1: {
 												ctor: '::',
 												_0: A2(
-													_mfeineis$elmanach$Styled$detailCheckbox,
+													_mfeineis$elmanac$Styled$detailCheckbox,
 													{ctor: '[]'},
 													{
 														ctor: '::',
@@ -14442,7 +14442,7 @@ var _mfeineis$elmanach$Main$settingsView = function (model) {
 												_1: {
 													ctor: '::',
 													_0: A2(
-														_mfeineis$elmanach$Styled$detailCheckbox,
+														_mfeineis$elmanac$Styled$detailCheckbox,
 														{ctor: '[]'},
 														{
 															ctor: '::',
@@ -14460,12 +14460,12 @@ var _mfeineis$elmanach$Main$settingsView = function (model) {
 					_1: {
 						ctor: '::',
 						_0: A2(
-							_mfeineis$elmanach$Styled$detailContent,
+							_mfeineis$elmanac$Styled$detailContent,
 							{ctor: '[]'},
 							{
 								ctor: '::',
 								_0: A2(
-									_mfeineis$elmanach$Styled$detailCheckbox,
+									_mfeineis$elmanac$Styled$detailCheckbox,
 									{ctor: '[]'},
 									{
 										ctor: '::',
@@ -14475,12 +14475,12 @@ var _mfeineis$elmanach$Main$settingsView = function (model) {
 								_1: {
 									ctor: '::',
 									_0: A2(
-										_mfeineis$elmanach$Styled$detailList,
+										_mfeineis$elmanac$Styled$detailList,
 										{ctor: '[]'},
 										{
 											ctor: '::',
 											_0: A2(
-												_mfeineis$elmanach$Styled$detailCheckbox,
+												_mfeineis$elmanac$Styled$detailCheckbox,
 												{
 													ctor: '::',
 													_0: _elm_lang$html$Html_Attributes$checked(true),
@@ -14494,7 +14494,7 @@ var _mfeineis$elmanach$Main$settingsView = function (model) {
 											_1: {
 												ctor: '::',
 												_0: A2(
-													_mfeineis$elmanach$Styled$detailCheckbox,
+													_mfeineis$elmanac$Styled$detailCheckbox,
 													{
 														ctor: '::',
 														_0: _elm_lang$html$Html_Attributes$checked(true),
@@ -14514,12 +14514,12 @@ var _mfeineis$elmanach$Main$settingsView = function (model) {
 						_1: {
 							ctor: '::',
 							_0: A2(
-								_mfeineis$elmanach$Styled$detailContent,
+								_mfeineis$elmanac$Styled$detailContent,
 								{ctor: '[]'},
 								{
 									ctor: '::',
 									_0: A2(
-										_mfeineis$elmanach$Styled$detailCheckbox,
+										_mfeineis$elmanac$Styled$detailCheckbox,
 										{ctor: '[]'},
 										{
 											ctor: '::',
@@ -14529,12 +14529,12 @@ var _mfeineis$elmanach$Main$settingsView = function (model) {
 									_1: {
 										ctor: '::',
 										_0: A2(
-											_mfeineis$elmanach$Styled$detailList,
+											_mfeineis$elmanac$Styled$detailList,
 											{ctor: '[]'},
 											{
 												ctor: '::',
 												_0: A2(
-													_mfeineis$elmanach$Styled$detailCheckbox,
+													_mfeineis$elmanac$Styled$detailCheckbox,
 													{
 														ctor: '::',
 														_0: _elm_lang$html$Html_Attributes$checked(true),
@@ -14548,7 +14548,7 @@ var _mfeineis$elmanach$Main$settingsView = function (model) {
 												_1: {
 													ctor: '::',
 													_0: A2(
-														_mfeineis$elmanach$Styled$detailCheckbox,
+														_mfeineis$elmanac$Styled$detailCheckbox,
 														{
 															ctor: '::',
 															_0: _elm_lang$html$Html_Attributes$checked(true),
@@ -14568,7 +14568,7 @@ var _mfeineis$elmanach$Main$settingsView = function (model) {
 							_1: {
 								ctor: '::',
 								_0: A2(
-									_mfeineis$elmanach$Styled$detailContent,
+									_mfeineis$elmanac$Styled$detailContent,
 									{ctor: '[]'},
 									{
 										ctor: '::',
@@ -14578,7 +14578,7 @@ var _mfeineis$elmanach$Main$settingsView = function (model) {
 								_1: {
 									ctor: '::',
 									_0: A2(
-										_mfeineis$elmanach$Styled$detailCheckbox,
+										_mfeineis$elmanac$Styled$detailCheckbox,
 										{
 											ctor: '::',
 											_0: _elm_lang$html$Html_Attributes$checked(true),
@@ -14598,19 +14598,19 @@ var _mfeineis$elmanach$Main$settingsView = function (model) {
 			}
 		});
 };
-var _mfeineis$elmanach$Main$view = function (model) {
+var _mfeineis$elmanac$Main$view = function (model) {
 	return A2(
-		_mfeineis$elmanach$Styled$pageFrame,
+		_mfeineis$elmanac$Styled$pageFrame,
 		{ctor: '[]'},
 		{
 			ctor: '::',
 			_0: A2(
-				_mfeineis$elmanach$Styled$pageHeader,
+				_mfeineis$elmanac$Styled$pageHeader,
 				{ctor: '[]'},
 				{
 					ctor: '::',
 					_0: A2(
-						_mfeineis$elmanach$Styled$pageLogo,
+						_mfeineis$elmanac$Styled$pageLogo,
 						{ctor: '[]'},
 						{
 							ctor: '::',
@@ -14620,7 +14620,7 @@ var _mfeineis$elmanach$Main$view = function (model) {
 					_1: {
 						ctor: '::',
 						_0: A2(
-							_mfeineis$elmanach$Styled$mainSearchInput,
+							_mfeineis$elmanac$Styled$mainSearchInput,
 							{
 								ctor: '::',
 								_0: _elm_lang$html$Html_Attributes$placeholder('Do you want to know more?'),
@@ -14633,17 +14633,17 @@ var _mfeineis$elmanach$Main$view = function (model) {
 			_1: {
 				ctor: '::',
 				_0: A2(
-					_mfeineis$elmanach$Styled$pageMain,
+					_mfeineis$elmanac$Styled$pageMain,
 					{
 						ctor: '::',
 						_0: A3(
-							_mfeineis$elmanach$Styled$topicContainer,
+							_mfeineis$elmanac$Styled$topicContainer,
 							_elm_lang$html$Html$text('Booleans'),
 							{ctor: '[]'},
 							{
 								ctor: '::',
 								_0: A2(
-									_mfeineis$elmanach$Styled$topicItem,
+									_mfeineis$elmanac$Styled$topicItem,
 									{ctor: '[]'},
 									{
 										ctor: '::',
@@ -14653,7 +14653,7 @@ var _mfeineis$elmanach$Main$view = function (model) {
 								_1: {
 									ctor: '::',
 									_0: A2(
-										_mfeineis$elmanach$Styled$topicItem,
+										_mfeineis$elmanac$Styled$topicItem,
 										{ctor: '[]'},
 										{
 											ctor: '::',
@@ -14663,7 +14663,7 @@ var _mfeineis$elmanach$Main$view = function (model) {
 									_1: {
 										ctor: '::',
 										_0: A2(
-											_mfeineis$elmanach$Styled$topicItem,
+											_mfeineis$elmanac$Styled$topicItem,
 											{ctor: '[]'},
 											{
 												ctor: '::',
@@ -14677,13 +14677,13 @@ var _mfeineis$elmanach$Main$view = function (model) {
 						_1: {
 							ctor: '::',
 							_0: A3(
-								_mfeineis$elmanach$Styled$topicContainer,
+								_mfeineis$elmanac$Styled$topicContainer,
 								_elm_lang$html$Html$text('Numbers'),
 								{ctor: '[]'},
 								{
 									ctor: '::',
 									_0: A2(
-										_mfeineis$elmanach$Styled$topicItem,
+										_mfeineis$elmanac$Styled$topicItem,
 										{ctor: '[]'},
 										{
 											ctor: '::',
@@ -14693,7 +14693,7 @@ var _mfeineis$elmanach$Main$view = function (model) {
 									_1: {
 										ctor: '::',
 										_0: A2(
-											_mfeineis$elmanach$Styled$topicItem,
+											_mfeineis$elmanac$Styled$topicItem,
 											{ctor: '[]'},
 											{
 												ctor: '::',
@@ -14703,7 +14703,7 @@ var _mfeineis$elmanach$Main$view = function (model) {
 										_1: {
 											ctor: '::',
 											_0: A2(
-												_mfeineis$elmanach$Styled$topicItem,
+												_mfeineis$elmanac$Styled$topicItem,
 												{ctor: '[]'},
 												{
 													ctor: '::',
@@ -14713,7 +14713,7 @@ var _mfeineis$elmanach$Main$view = function (model) {
 											_1: {
 												ctor: '::',
 												_0: A2(
-													_mfeineis$elmanach$Styled$topicItem,
+													_mfeineis$elmanac$Styled$topicItem,
 													{ctor: '[]'},
 													{
 														ctor: '::',
@@ -14728,13 +14728,13 @@ var _mfeineis$elmanach$Main$view = function (model) {
 							_1: {
 								ctor: '::',
 								_0: A3(
-									_mfeineis$elmanach$Styled$topicContainer,
+									_mfeineis$elmanac$Styled$topicContainer,
 									_elm_lang$html$Html$text('Maybe'),
 									{ctor: '[]'},
 									{
 										ctor: '::',
 										_0: A2(
-											_mfeineis$elmanach$Styled$topicItem,
+											_mfeineis$elmanac$Styled$topicItem,
 											{ctor: '[]'},
 											{
 												ctor: '::',
@@ -14744,7 +14744,7 @@ var _mfeineis$elmanach$Main$view = function (model) {
 										_1: {
 											ctor: '::',
 											_0: A2(
-												_mfeineis$elmanach$Styled$topicItem,
+												_mfeineis$elmanac$Styled$topicItem,
 												{ctor: '[]'},
 												{
 													ctor: '::',
@@ -14760,13 +14760,13 @@ var _mfeineis$elmanach$Main$view = function (model) {
 					},
 					{
 						ctor: '::',
-						_0: _mfeineis$elmanach$Main$settingsView(model),
+						_0: _mfeineis$elmanac$Main$settingsView(model),
 						_1: {ctor: '[]'}
 					}),
 				_1: {
 					ctor: '::',
 					_0: A2(
-						_mfeineis$elmanach$Styled$pageSecondary,
+						_mfeineis$elmanac$Styled$pageSecondary,
 						{ctor: '[]'},
 						{
 							ctor: '::',
@@ -14776,7 +14776,7 @@ var _mfeineis$elmanach$Main$view = function (model) {
 					_1: {
 						ctor: '::',
 						_0: A2(
-							_mfeineis$elmanach$Styled$pageExtra,
+							_mfeineis$elmanac$Styled$pageExtra,
 							{ctor: '[]'},
 							{
 								ctor: '::',
@@ -14786,26 +14786,26 @@ var _mfeineis$elmanach$Main$view = function (model) {
 						_1: {
 							ctor: '::',
 							_0: A2(
-								_mfeineis$elmanach$Styled$pageFooter,
+								_mfeineis$elmanac$Styled$pageFooter,
 								{ctor: '[]'},
 								{
 									ctor: '::',
 									_0: A2(
-										_mfeineis$elmanach$Styled$sectionTitle,
+										_mfeineis$elmanac$Styled$sectionTitle,
 										{ctor: '[]'},
 										{
 											ctor: '::',
-											_0: _elm_lang$html$Html$text('About Elmanach'),
+											_0: _elm_lang$html$Html$text('About Elmanac'),
 											_1: {ctor: '[]'}
 										}),
 									_1: {
 										ctor: '::',
 										_0: A2(
-											_mfeineis$elmanach$Styled$sectionContent,
+											_mfeineis$elmanac$Styled$sectionContent,
 											{ctor: '[]'},
 											{
 												ctor: '::',
-												_0: _elm_lang$html$Html$text('\n                    Elmanach strives to be a comprehensive information hub\n                    for the Elm ecosystem.\n                    '),
+												_0: _elm_lang$html$Html$text('\n                    Elmanac strives to be a comprehensive information hub\n                    for the Elm ecosystem.\n                    '),
 												_1: {ctor: '[]'}
 											}),
 										_1: {ctor: '[]'}
@@ -14818,40 +14818,40 @@ var _mfeineis$elmanach$Main$view = function (model) {
 			}
 		});
 };
-var _mfeineis$elmanach$Main$update = F2(
+var _mfeineis$elmanac$Main$update = F2(
 	function (msg, model) {
 		return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
 	});
-var _mfeineis$elmanach$Main$subscriptions = function (model) {
+var _mfeineis$elmanac$Main$subscriptions = function (model) {
 	return _elm_lang$core$Platform_Sub$none;
 };
-var _mfeineis$elmanach$Main$init = function (flags) {
+var _mfeineis$elmanac$Main$init = function (flags) {
 	return {
 		ctor: '_Tuple2',
 		_0: {},
 		_1: _elm_lang$core$Platform_Cmd$none
 	};
 };
-var _mfeineis$elmanach$Main$main = _elm_lang$html$Html$programWithFlags(
-	{init: _mfeineis$elmanach$Main$init, subscriptions: _mfeineis$elmanach$Main$subscriptions, update: _mfeineis$elmanach$Main$update, view: _mfeineis$elmanach$Main$view})(
+var _mfeineis$elmanac$Main$main = _elm_lang$html$Html$programWithFlags(
+	{init: _mfeineis$elmanac$Main$init, subscriptions: _mfeineis$elmanac$Main$subscriptions, update: _mfeineis$elmanac$Main$update, view: _mfeineis$elmanac$Main$view})(
 	_elm_lang$core$Json_Decode$succeed(
 		{}));
-var _mfeineis$elmanach$Main$defaultFlags = {};
-var _mfeineis$elmanach$Main$reactor = _elm_lang$html$Html$program(
+var _mfeineis$elmanac$Main$defaultFlags = {};
+var _mfeineis$elmanac$Main$reactor = _elm_lang$html$Html$program(
 	{
-		init: _mfeineis$elmanach$Main$init(_mfeineis$elmanach$Main$defaultFlags),
-		subscriptions: _mfeineis$elmanach$Main$subscriptions,
-		update: _mfeineis$elmanach$Main$update,
-		view: _mfeineis$elmanach$Main$view
+		init: _mfeineis$elmanac$Main$init(_mfeineis$elmanac$Main$defaultFlags),
+		subscriptions: _mfeineis$elmanac$Main$subscriptions,
+		update: _mfeineis$elmanac$Main$update,
+		view: _mfeineis$elmanac$Main$view
 	});
-var _mfeineis$elmanach$Main$Model = {};
-var _mfeineis$elmanach$Main$Flags = {};
-var _mfeineis$elmanach$Main$NoOp = {ctor: 'NoOp'};
+var _mfeineis$elmanac$Main$Model = {};
+var _mfeineis$elmanac$Main$Flags = {};
+var _mfeineis$elmanac$Main$NoOp = {ctor: 'NoOp'};
 
 var Elm = {};
 Elm['Main'] = Elm['Main'] || {};
-if (typeof _mfeineis$elmanach$Main$main !== 'undefined') {
-    _mfeineis$elmanach$Main$main(Elm['Main'], 'Main', undefined);
+if (typeof _mfeineis$elmanac$Main$main !== 'undefined') {
+    _mfeineis$elmanac$Main$main(Elm['Main'], 'Main', undefined);
 }
 
 if (typeof define === "function" && define['amd'])
