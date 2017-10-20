@@ -1,5 +1,5 @@
 {
-    "version": "0.1.0",
+    "version": "0.1.1",
     "summary": "A hub to discover the delightful Elm language.",
     "repository": "https://github.com/mfeineis/elmanach.git",
     "license": "BSD3",
@@ -8,13 +8,9 @@
     ],
     "exposed-modules": [],
     "dependencies": {
-        "NoRedInk/elm-simple-fuzzy": "1.0.2 <= v < 2.0.0",
         "elm-lang/core": "5.1.1 <= v < 6.0.0",
-        "elm-lang/dom": "1.1.1 <= v < 2.0.0",
         "elm-lang/html": "2.0.0 <= v < 3.0.0",
-        "rtfeldman/elm-css": "9.1.0 <= v < 10.0.0",
-        "rtfeldman/elm-css-helpers": "2.1.0 <= v < 3.0.0",
-        "thebritican/elm-autocomplete": "4.0.3 <= v < 5.0.0"
+        "rtfeldman/elm-css": "9.1.0 <= v < 10.0.0"
     },
     "elm-version": "0.18.0 <= v < 0.19.0"
 }
