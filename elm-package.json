@@ -1,7 +1,7 @@
 {
     "version": "0.1.1",
     "summary": "A hub to discover the delightful Elm language.",
-    "repository": "https://github.com/mfeineis/elmanach.git",
+    "repository": "https://github.com/mfeineis/elmanac.git",
     "license": "BSD3",
     "source-directories": [
         "./client/src"

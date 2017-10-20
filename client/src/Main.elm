@@ -113,11 +113,11 @@ view model =
             [ Html.text "Green"
             ]
         , Styled.pageFooter []
-            [ Styled.sectionTitle [] [ Html.text "About Elmanach" ]
+            [ Styled.sectionTitle [] [ Html.text "About Elmanac" ]
             , Styled.sectionContent []
                 [ Html.text
                     """
-                    Elmanach strives to be a comprehensive information hub
+                    Elmanac strives to be a comprehensive information hub
                     for the Elm ecosystem.
                     """
                 ]
@@ -133,7 +133,7 @@ settingsView model =
             [ Html.text
                 """
                 Here you may choose the settings for your
-                personal Elmanach experience.
+                personal Elmanac experience.
                 """
             ]
         , Styled.detailContent []

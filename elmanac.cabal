@@ -1,8 +1,8 @@
-name:                elmanach
-version:             0.1.0.0
+name:                elmanac
+version:             0.1.1.0
 -- synopsis:
 -- description:
-homepage:            https://github.com/mfeineis/elmanach#readme
+homepage:            https://github.com/mfeineis/elmanac#readme
 license:             BSD3
 license-file:        LICENSE
 author:              Martin Feineis
@@ -20,7 +20,7 @@ library
 --    ghc-options: -O2 -fsimpl-tick-factor=200
 
   hs-source-dirs:      server/src
-  exposed-modules:     Elmanach
+  exposed-modules:     Elmanac
                      , Elmify
   -- other-modules:       Elmify
   build-depends:       base >= 4.7 && < 5
@@ -45,13 +45,13 @@ library
 --                       -fno-code
 --                       -fobject-code
 
-executable elmanach-exe
+executable elmanac-exe
   hs-source-dirs:      server/app
   main-is:             Main.hs
   ghc-options:         -threaded -O2 -rtsopts -with-rtsopts=-N
   build-depends:       base
                      , aeson
-                     , elmanach
+                     , elmanac
                      , full-text-search >= 0.2.1.4
                      , protolude
                      , scotty
@@ -62,13 +62,13 @@ executable elmanach-exe
                      , wai-extra
   default-language:    Haskell2010
 
-test-suite elmanach-test
+test-suite elmanac-test
   type:                exitcode-stdio-1.0
   hs-source-dirs:      server/test
   main-is:             Spec.hs
   build-depends:       base
                      , aeson
-                     , elmanach
+                     , elmanac
                      , hspec
                      , hspec-wai
                      , hspec-wai-json
@@ -80,4 +80,4 @@ test-suite elmanach-test
 
 source-repository head
   type:     git
-  location: https://github.com/mfeineis/elmanach
+  location: https://github.com/mfeineis/elmanac
