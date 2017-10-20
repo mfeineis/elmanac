@@ -94,7 +94,7 @@ app config = do
     middleware simpleCors
 
     get "/app.js" $ do
-        redirect "/app-dev.js"
+        redirect "/js/app-dev.js"
 
     get "/" $ do
         redirect "/index.html"
