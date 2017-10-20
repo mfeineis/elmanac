@@ -1,11 +1,17 @@
 module Styled
     exposing
-        ( detailCheckbox
+        ( contentAnnotation
+        , contentLink
+        , detailCheckbox
         , detailContainer
         , detailContent
         , detailList
         , detailTitle
+        , horizontalList
+        , horizontalListItem
+        , li
         , mainSearchInput
+        , ol
         , pageExtra
         , pageFooter
         , pageFrame
@@ -15,8 +21,16 @@ module Styled
         , pageSecondary
         , sectionContent
         , sectionTitle
+        , subSectionTitle
+        , table
+        , tbody
+        , td
+        , th
+        , thead
         , topicContainer
         , topicItem
+        , tr
+        , ul
         )
 
 import Css exposing (..)
@@ -30,9 +44,7 @@ import Html
         , img
         , input
         , label
-        , li
         , select
-        , ul
         )
 import Html.Attributes as Attr
 
@@ -49,9 +61,33 @@ type alias Styled msg =
 theme =
     { borderColor = hex "dddddd"
     , contentMaxWidth = px 1200
-    , defaultSpacing = px 10
+    , contentSpacing = px 20
+    , defaultSpacing = px 20
     , fontSize = px 16
+    , smallSpacing = px 10
     }
+
+
+contentLink : Styled msg
+contentLink attrs children =
+    Html.a
+        (styles
+            [ color (hex "1184ce") ]
+            :: attrs
+        )
+        children
+
+
+contentAnnotation : Styled msg
+contentAnnotation attrs children =
+    Html.p
+        (styles
+            [ fontStyle italic
+            , margin2 theme.smallSpacing zero
+            ]
+            :: attrs
+        )
+        children
 
 
 detailCheckbox : Styled msg
@@ -87,7 +123,7 @@ detailContent : Styled msg
 detailContent attrs children =
     div
         (styles
-            [ marginBottom theme.defaultSpacing
+            [ marginBottom theme.smallSpacing
             ]
             :: attrs
         )
@@ -100,7 +136,7 @@ detailList attrs children =
         (styles
             [ listStyle none
             , margin zero
-            , paddingLeft theme.defaultSpacing
+            , paddingLeft theme.smallSpacing
             ]
             :: attrs
         )
@@ -112,7 +148,44 @@ detailTitle attrs children =
     h2
         (styles
             [ fontSize (px 16)
-            , margin4 zero zero theme.defaultSpacing zero
+            , margin4 zero zero theme.smallSpacing zero
+            ]
+            :: attrs
+        )
+        children
+
+
+horizontalList : Styled msg
+horizontalList attrs children =
+    Html.ul
+        (styles
+            [ listStyle none
+            , margin zero
+            , padding zero
+            ]
+            :: attrs
+        )
+        children
+
+
+horizontalListItem : Styled msg
+horizontalListItem attrs children =
+    Html.li
+        (styles
+            [ display inlineBlock
+            , marginRight theme.defaultSpacing
+            ]
+            :: attrs
+        )
+        children
+
+
+li : Styled msg
+li attrs children =
+    Html.li
+        (styles
+            [ marginBottom theme.smallSpacing
+            , marginTop theme.smallSpacing
             ]
             :: attrs
         )
@@ -136,6 +209,16 @@ mainSearchInput attrs children =
         children
 
 
+ol : Styled msg
+ol attrs children =
+    Html.ol
+        (styles
+            []
+            :: attrs
+        )
+        children
+
+
 pageExtra : Styled msg
 pageExtra attrs children =
     div
@@ -148,7 +231,7 @@ pageExtra attrs children =
                 [ borderTop3 (px 1) solid (hex "f0f0f0")
                 , margin2 zero auto
                 , maxWidth theme.contentMaxWidth
-                , padding theme.defaultSpacing
+                , padding2 zero theme.defaultSpacing
                 , position relative
                 , width (pct 100)
                 ]
@@ -176,7 +259,7 @@ pageFooter attrs children =
             (styles
                 [ margin2 zero auto
                 , maxWidth theme.contentMaxWidth
-                , padding theme.defaultSpacing
+                , padding2 zero theme.defaultSpacing
                 , position relative
                 , width (pct 100)
                 ]
@@ -252,21 +335,23 @@ pageHeader attrs children =
 
 pageLogo : Styled msg
 pageLogo attrs children =
-    img
-        (styles
-            [ display inlineBlock
-            , height (px 30)
-            , lineHeight (px 42)
-            , marginLeft (px 11)
-            , marginTop (px 11)
-            , position absolute
-            , textAlign center
-            , verticalAlign top
-            , width (px 30)
-            ]
-            :: ([ Attr.src "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABSQAAAUkBRDzYzwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALvSURBVEiJvdbtS1NRHAfw79m92nyY2BScXcWVSBI4abICNcsXEZoGgQq2xwqEBvbsW90fkG80jIyIwMIUfBNLEgI1JIsoRYIoTVeKi3CBAx9iu6cXetd1be7cpZ1359zfj8/vcM8Tqepo3nO04t19SmCG8nbri7fLxQUCboAeV5LImbIre2fWMx05eYv7QWBQCJfuTXUn+lZqm1QiLQOgZ4YNxmN9am9C4f/GVQBACKlLn0jueT1qvEgoHimEAeDmAZ3TFeT50wAdZYbDcQCP48Hzdc62IJ9YzYKr5B0JfzNivBAPToEWVpwPH9jE4dEUWPWHp6cAMV1pAXk6Z47H21XNBX49A0gFEyzh6y+zMOzRNz41uLRBqmzBcQQ/288Wr84MTUbFI8ISnv11FQ+0VRabMHgewDkmlWLg7bLeTKeEh/k65+JMlJlHhSX81YQBACw2YRAxcYqB9369ebhEuAcKCwWQr3MiEs4VGctdMfBD37xZhb6UNHtx2vQBAEXboSPGfd0Ascq+lGlT3QlLK2eaVGKwHCB5TDATLkPpVjQqzgRL+Px33cGlZI1jCx4b3YL/8J+8xEFVue0/jtDqxyeLAcBqEwYBCjUjulkjWgqEG/i80H5KKRzCNZpVmx5zYEXDcVXs0Ijp3IjnBLpSHCIF4ZRmixT+OGZMBxJzk8ww1XanEKr2LWitWuEJwLjPKUXr9fmx2wrhPyhAraCAn5QCC2DCKUXrtdmxTogYUgCHoaFh1LPgEkpEDAEwMcJRUEacULRdlaFAjCMTAAjgXs5Nsmaaau7SSGgEPEPoJRSkUUKvzI51EBHPJTQmvIGqGzJNNXcoYItVZBgOUPJRhh6Rh0a/nZSiYXgG77Nc/uBKIhxeACgJD4u4j+NGZficp6ZnPLV5DQSfIoX8/QL5V1SG9xE7oIa1dK0ToGiMCu8YyoCH4B1HY+D8rqIyvB92CjVsEs7vOhqy0dBP7ZBwPiFXXbdxOOweGo6nB7yO3/TojrVr58QKAAAAAElFTkSuQmCC"] ++ attrs)
-        )
-        children
+    Html.a [ Attr.href "/" ]
+        [ img
+            (styles
+                [ display inlineBlock
+                , height (px 30)
+                , lineHeight (px 42)
+                , marginLeft (px 11)
+                , marginTop (px 11)
+                , position absolute
+                , textAlign center
+                , verticalAlign top
+                , width (px 30)
+                ]
+                :: ([ Attr.src "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABSQAAAUkBRDzYzwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALvSURBVEiJvdbtS1NRHAfw79m92nyY2BScXcWVSBI4abICNcsXEZoGgQq2xwqEBvbsW90fkG80jIyIwMIUfBNLEgI1JIsoRYIoTVeKi3CBAx9iu6cXetd1be7cpZ1359zfj8/vcM8Tqepo3nO04t19SmCG8nbri7fLxQUCboAeV5LImbIre2fWMx05eYv7QWBQCJfuTXUn+lZqm1QiLQOgZ4YNxmN9am9C4f/GVQBACKlLn0jueT1qvEgoHimEAeDmAZ3TFeT50wAdZYbDcQCP48Hzdc62IJ9YzYKr5B0JfzNivBAPToEWVpwPH9jE4dEUWPWHp6cAMV1pAXk6Z47H21XNBX49A0gFEyzh6y+zMOzRNz41uLRBqmzBcQQ/288Wr84MTUbFI8ISnv11FQ+0VRabMHgewDkmlWLg7bLeTKeEh/k65+JMlJlHhSX81YQBACw2YRAxcYqB9369ebhEuAcKCwWQr3MiEs4VGctdMfBD37xZhb6UNHtx2vQBAEXboSPGfd0Ascq+lGlT3QlLK2eaVGKwHCB5TDATLkPpVjQqzgRL+Px33cGlZI1jCx4b3YL/8J+8xEFVue0/jtDqxyeLAcBqEwYBCjUjulkjWgqEG/i80H5KKRzCNZpVmx5zYEXDcVXs0Ijp3IjnBLpSHCIF4ZRmixT+OGZMBxJzk8ww1XanEKr2LWitWuEJwLjPKUXr9fmx2wrhPyhAraCAn5QCC2DCKUXrtdmxTogYUgCHoaFh1LPgEkpEDAEwMcJRUEacULRdlaFAjCMTAAjgXs5Nsmaaau7SSGgEPEPoJRSkUUKvzI51EBHPJTQmvIGqGzJNNXcoYItVZBgOUPJRhh6Rh0a/nZSiYXgG77Nc/uBKIhxeACgJD4u4j+NGZficp6ZnPLV5DQSfIoX8/QL5V1SG9xE7oIa1dK0ToGiMCu8YyoCH4B1HY+D8rqIyvB92CjVsEs7vOhqy0dBP7ZBwPiFXXbdxOOweGo6nB7yO3/TojrVr58QKAAAAAElFTkSuQmCC" ] ++ attrs)
+            )
+            children
+        ]
 
 
 pageMain : List (Html msg) -> List (Html msg) -> Html msg
@@ -278,9 +363,9 @@ pageMain topics details =
         ]
         [ div
             [ styles
-                [ margin4 (px -13) auto (px 6) auto
+                [ margin4 (px -23) auto (px 6) auto
                 , maxWidth theme.contentMaxWidth
-                , padding2 zero (px 10)
+                , padding2 zero theme.defaultSpacing
                 , width (pct 100)
                 ]
             ]
@@ -307,7 +392,7 @@ pageMain topics details =
                     [ styles
                         [ backgroundColor (hex "eeeeee")
                         , flexGrow (num 1)
-                        , padding theme.defaultSpacing
+                        , padding theme.smallSpacing
                         , width (pct 100)
                         ]
                     ]
@@ -353,9 +438,102 @@ sectionTitle : Styled msg
 sectionTitle attrs children =
     h1
         (styles
-            [ fontSize (px 18)
+            [ color (hex "60b5cc")
+            , fontSize (px 22)
             , margin2 theme.defaultSpacing zero
             ]
+            :: attrs
+        )
+        children
+
+
+subSectionTitle : Styled msg
+subSectionTitle attrs children =
+    h2
+        (styles
+            [ color (hex "f0ad00")
+            , fontSize (px 18)
+            , margin2 theme.defaultSpacing zero
+            ]
+            :: attrs
+        )
+        children
+
+
+table : Styled msg
+table attrs children =
+    Html.table
+        (styles
+            [ margin4 theme.contentSpacing (px -1) theme.contentSpacing (px -1)
+            ]
+            :: attrs
+        )
+        children
+
+
+tbody : Styled msg
+tbody attrs children =
+    Html.tbody
+        (styles
+            []
+            :: attrs
+        )
+        children
+
+
+td : Styled msg
+td attrs children =
+    Html.td
+        (styles
+            [ borderBottom3 (px 1) solid (hex "eeeeee")
+            , padding2 theme.defaultSpacing zero
+            , paddingRight theme.defaultSpacing
+            , verticalAlign top
+            ]
+            :: attrs
+        )
+        children
+
+
+tfoot : Styled msg
+tfoot attrs children =
+    Html.tfoot
+        (styles
+            []
+            :: attrs
+        )
+        children
+
+
+th : Styled msg
+th attrs children =
+    Html.th
+        (styles
+            [ borderBottom3 (px 1) solid (hex "f0ad00")
+            , color (hex "f0ad00")
+            , padding2 theme.smallSpacing zero
+            , textAlign left
+            ]
+            :: attrs
+        )
+        children
+
+
+thead : Styled msg
+thead attrs children =
+    Html.thead
+        (styles
+            []
+            :: attrs
+        )
+        children
+
+
+tr : Styled msg
+tr attrs children =
+    Html.tr
+        (styles
+            []
             :: attrs
         )
         children
@@ -376,7 +554,7 @@ topicContainer topic attrs children =
                 , color (hex "888888")
                 , marginTop (px -1)
                 , maxWidth (px 125)
-                , padding theme.defaultSpacing
+                , padding theme.smallSpacing
                 , textAlign right
                 , width (pct 100)
                 ]
@@ -404,6 +582,7 @@ topicItem attrs children =
     li
         [ styles
             [ borderTop3 (px 1) solid theme.borderColor
+            , marginBottom zero
             , marginTop (px -1)
             ]
         ]
@@ -414,7 +593,7 @@ topicItem attrs children =
                 , display block
                 , cursor pointer
                 , fontSize theme.fontSize
-                , padding theme.defaultSpacing
+                , padding theme.smallSpacing
                 , textAlign left
                 , width (pct 100)
                 ]
@@ -422,3 +601,13 @@ topicItem attrs children =
             )
             children
         ]
+
+
+ul : Styled msg
+ul attrs children =
+    Html.ul
+        (styles
+            []
+            :: attrs
+        )
+        children
