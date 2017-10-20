@@ -68,6 +68,7 @@ The corresponding documents live in the [design-docs](design-docs/) directory.
 There is no static roadmap right now.
 
 ## Changelog
+* 2017-10-20 Added a bunch of useful static resources, we'll decide later how to make them accessable
 * 2017-10-20 Frontend build from scratch, updated Haskell dependencies and fixed project spelling to "Elmanac"
 * 2017-07-31 Rename to "Elmanach"
 * 2017-07-19 Basic Elm frontend and Haskell backend stubs
