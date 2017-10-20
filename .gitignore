@@ -3,6 +3,9 @@ elm-stuff
 # elm-repl generated files
 repl-temp-*
 
+# JavaScript assets
+assets/**/*.js
+
 # Haskell stuff
 *.hi
 *.o
