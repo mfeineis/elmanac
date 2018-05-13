@@ -1,7 +1,8 @@
-module Main exposing (main, reactor)
+module Main exposing (main)
 
-import Html exposing (Html)
-import Html.Attributes as Attr
+import Browser
+import Html.Styled as Html exposing (Html, toUnstyled)
+import Html.Styled.Attributes as Attr
 import Styled
 
 
@@ -25,25 +26,16 @@ defaultFlags =
     {}
 
 
-init : Flags -> ( Model, Cmd Msg )
-init flags =
+init : Browser.Env Flags -> ( Model, Cmd Msg )
+init { flags, url } =
     ( {}, Cmd.none )
 
 
 main : Program Flags Model Msg
 main =
-    Html.programWithFlags
+    Browser.fullscreen
         { init = init
-        , subscriptions = subscriptions
-        , update = update
-        , view = view
-        }
-
-
-reactor : Program Never Model Msg
-reactor =
-    Html.program
-        { init = init defaultFlags
+        , onNavigation = Nothing
         , subscriptions = subscriptions
         , update = update
         , view = view
@@ -72,59 +64,67 @@ update msg model =
 -- Displaying the current state
 
 
-view : Model -> Html Msg
+view : Model -> Browser.Page Msg
 view model =
-    Styled.pageFrame []
-        [ Styled.pageHeader []
-            [ Styled.pageLogo []
-                [ Html.text "Elm"
+    let
+        body =
+            Styled.pageFrame []
+                [ Styled.pageHeader []
+                    [ Styled.pageLogo []
+                        [ Html.text "Elm"
+                        ]
+                    , Styled.mainSearchInput
+                        [ Attr.placeholder "Do you want to know more?"
+                        ]
+                        []
+                    ]
+                , Styled.pageMain
+                    [ Styled.topicContainer (Html.text "Booleans")
+                        []
+                        [ Styled.topicItem [] [ Html.text "Blubb" ]
+                        , Styled.topicItem [] [ Html.text "Bla" ]
+                        , Styled.topicItem [] [ Html.text "Plisch" ]
+                        ]
+                    , Styled.topicContainer (Html.text "Numbers")
+                        []
+                        [ Styled.topicItem [] [ Html.text "Int" ]
+                        , Styled.topicItem [] [ Html.text "Float" ]
+                        , Styled.topicItem [] [ Html.text "Double" ]
+                        , Styled.topicItem [] [ Html.text "Complex" ]
+                        ]
+                    , Styled.topicContainer (Html.text "Maybe")
+                        []
+                        [ Styled.topicItem [] [ Html.text "Nothing" ]
+                        , Styled.topicItem [] [ Html.text "Just something" ]
+                        ]
+                    ]
+                    [ settingsView model
+                    ]
+                , elmLinksView model
+                , toolbeltView model
+                , contributingView model
+                , faqView model
+                , learningElmView model
+                , externalToolsLinksView model
+                , editorPluginView model
+                , elmsImpactView model
+                , Styled.pageFooter []
+                    [ Styled.sectionTitle [] [ Html.text "About Elmanac" ]
+                    , Styled.sectionContent []
+                        [ Html.text
+                            """
+                            Elmanac strives to be a comprehensive information hub
+                            for the Elm ecosystem.
+                            """
+                        ]
+                    ]
                 ]
-            , Styled.mainSearchInput
-                [ Attr.placeholder "Do you want to know more?"
-                ]
-                []
-            ]
-        , Styled.pageMain
-            [ Styled.topicContainer (Html.text "Booleans")
-                []
-                [ Styled.topicItem [] [ Html.text "Blubb" ]
-                , Styled.topicItem [] [ Html.text "Bla" ]
-                , Styled.topicItem [] [ Html.text "Plisch" ]
-                ]
-            , Styled.topicContainer (Html.text "Numbers")
-                []
-                [ Styled.topicItem [] [ Html.text "Int" ]
-                , Styled.topicItem [] [ Html.text "Float" ]
-                , Styled.topicItem [] [ Html.text "Double" ]
-                , Styled.topicItem [] [ Html.text "Complex" ]
-                ]
-            , Styled.topicContainer (Html.text "Maybe")
-                []
-                [ Styled.topicItem [] [ Html.text "Nothing" ]
-                , Styled.topicItem [] [ Html.text "Just something" ]
-                ]
-            ]
-            [ settingsView model
-            ]
-        , elmLinksView model
-        , toolbeltView model
-        , contributingView model
-        , faqView model
-        , learningElmView model
-        , externalToolsLinksView model
-        , editorPluginView model
-        , elmsImpactView model
-        , Styled.pageFooter []
-            [ Styled.sectionTitle [] [ Html.text "About Elmanac" ]
-            , Styled.sectionContent []
-                [ Html.text
-                    """
-                    Elmanac strives to be a comprehensive information hub
-                    for the Elm ecosystem.
-                    """
-                ]
-            ]
+    in
+    { title = "Elmanac"
+    , body =
+        [ toUnstyled body
         ]
+    }
 
 
 elmsImpactView : Model -> Html Msg
@@ -133,7 +133,12 @@ elmsImpactView model =
         [ Styled.sectionTitle [] [ Html.text "Elm's Impact" ]
         , Styled.sectionContent []
             [ Styled.ul []
+                  --
                 [ Styled.li []
+                    [ Styled.contentLink [ Attr.href "https://github.com/wende/elchemy" ]
+                        [ Html.text "Elmchemy - Write Elixir code using statically-typed Elm-like syntax (compatible with Elm tooling)" ]
+                    ]
+                , Styled.li []
                     [ Styled.contentLink [ Attr.href "https://fable-elmish.github.io/elmish/" ]
                         [ Html.text "Elmish - Elm style web framework in F#" ]
                     ]
@@ -574,7 +579,7 @@ settingsView model =
                 ]
             ]
         , Styled.detailContent []
-            [ Html.text "Your settings will be safed in `localStorage`." ]
+            [ Html.text "Your settings will be saved in `localStorage`." ]
         , Styled.detailCheckbox
             [ Attr.checked True ]
             [ Html.text "Save Settings" ]
