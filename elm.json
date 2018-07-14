@@ -5,22 +5,24 @@
     ],
     "elm-version": "0.19.0",
     "dependencies": {
-        "elm-explorations/markdown": "1.0.0",
-        "elm-lang/browser": "1.0.0",
-        "elm-lang/core": "6.0.0",
-        "elm-lang/html": "3.0.0",
-        "elm-lang/http": "2.0.0",
-        "elm-lang/json": "1.0.0",
-        "elm-lang/time": "1.0.0",
-        "rtfeldman/elm-css": "14.0.3"
-    },
-    "test-dependencies": {},
-    "do-not-edit-this-by-hand": {
-        "transitive-dependencies": {
+        "direct": {
+            "elm/browser": "1.0.0",
+            "elm/core": "1.0.0",
+            "elm/html": "1.0.0",
+            "elm/json": "1.0.0",
+            "elm/url": "1.0.0",
+            "elm-explorations/markdown": "1.0.0",
+            "rtfeldman/elm-css": "15.0.0"
+        },
+        "indirect": {
             "Skinney/murmur3": "2.0.7",
-            "elm-lang/url": "1.0.0",
-            "elm-lang/virtual-dom": "3.0.0",
-            "rtfeldman/hex": "1.0.2"
+            "elm/time": "1.0.0",
+            "elm/virtual-dom": "1.0.0",
+            "rtfeldman/hex": "1.0.1"
         }
+    },
+    "test-dependencies": {
+        "direct": {},
+        "indirect": {}
     }
 }

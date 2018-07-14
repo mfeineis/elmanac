@@ -4,6 +4,7 @@ import Browser
 import Html.Styled as Html exposing (Html, toUnstyled)
 import Html.Styled.Attributes as Attr
 import Styled
+import Url exposing (Url)
 
 
 -- App setup
@@ -15,6 +16,8 @@ type alias Model =
 
 type Msg
     = NoOp
+    | LinkClicked Browser.UrlRequest
+    | UrlChanged Url.Url
 
 
 type alias Flags =
@@ -26,16 +29,17 @@ defaultFlags =
     {}
 
 
-init : Browser.Env Flags -> ( Model, Cmd Msg )
-init { flags, url } =
+init : Flags -> ( Model, Cmd Msg )
+init flags =
     ( {}, Cmd.none )
 
 
 main : Program Flags Model Msg
 main =
-    Browser.fullscreen
+    Browser.application
         { init = init
-        , onNavigation = Nothing
+        , onUrlChange : Url -> msg
+        , onUrlRequest : UrlRequest -> msg
         , subscriptions = subscriptions
         , update = update
         , view = view
@@ -64,7 +68,7 @@ update msg model =
 -- Displaying the current state
 
 
-view : Model -> Browser.Page Msg
+view : Model -> Browser.Document Msg
 view model =
     let
         body =
